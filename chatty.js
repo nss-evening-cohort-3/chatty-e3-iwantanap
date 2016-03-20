@@ -4,8 +4,8 @@ var Chatty = (function() {
 
     return {
         loadMessages: function(callbackFunc) {
-            // The first IIFE should add a public function (e.g. loadInventory) that loads the inventory.json file and stores the inventory in a private variable.
-            //Step 1: Set up http req for inventory
+            // The first IIFE should add a public function (e.g. loadMessages) that loads the messages.json file and stores the messages in a private variable.
+            //Step 1: Set up http req for messages
             var messagesReq = new XMLHttpRequest;
 
             //Step 2: Go get it
