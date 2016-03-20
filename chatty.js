@@ -9,7 +9,7 @@ var Chatty = (function() {
             var messagesReq = new XMLHttpRequest;
 
             //Step 2: Go get it
-            messagesReq.open("GET", "inventory.json");
+            messagesReq.open("GET", "messages.json");
             messagesReq.send();
 
             //Step 3: Event Listener
