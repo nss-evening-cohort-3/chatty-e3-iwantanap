@@ -1,8 +1,8 @@
 var chattyBody = document.querySelector("body");
 
 // NAV: If there are no messages, then the clear messages button should be disabled (see example above).
-if (document.getElementById("message-area") /*HAS NO CHILD*/) {
-      document.getElementById("delete-btn").setAttribute("disabled", "disabled");
+if (document.getElementById("message-area").innerHTML === "") {
+  document.getElementById("clear-board").setAttribute("disabled", "disabled");
 }
 
 chattyBody.addEventListener("keypress", function(e) {
@@ -13,34 +13,32 @@ chattyBody.addEventListener("keypress", function(e) {
 });
 
 chattyBody.addEventListener("click", function(e) {
-
   // NAV: When the user clicks the clear messages button, all current chat messages should be removed from the application.
-  if (event.target.id === "delete-btn" && /*BUTTON IS ENABLED*/) {
+  if (event.target.id === "clear-board" /* && BUTTON IS ENABLED*/) {
     console.log("deleteAllMessages", e);
     // deleteAllMessages(e);
   }
-
-  if (event.target.className === "deleteThisMessage") {
+  if (event.target.className.includes("deleteThisMessage") === true) {
     console.log(" Chatty.deleteSingleMessage", e);
     // Chatty.deleteSingleMessage(e)
   }
 
-  if (event.target.id === "dark-theme" && event.target.value === "checked") {
+  if (event.target.id === "dark-theme" && event.target.checked === true) {
     console.log("goToDarkTheme", e);
     // goToDarkTheme(e);
   }
 
-  if (event.target.id === "dark-theme" && event.target.value === "unchecked") {
+  if (event.target.id === "dark-theme" && event.target.checked === false) {
     console.log("goToLightTheme", e);
     // goToLightTheme(e);
   }
 
-  if (event.target.id === "large-text" && event.target.value === "checked") {
+  if (event.target.id === "large-text" && event.target.checked === true) {
     console.log("goToLargeText", e);
     // goToLargeText(e);
   }
 
-  if (event.target.id === "large-text" && event.target.value === "unchecked") {
+  if (event.target.id === "large-text" && event.target.checked === false) {
     console.log("goToRegText", e);
     // goToRegText(e);
   }
