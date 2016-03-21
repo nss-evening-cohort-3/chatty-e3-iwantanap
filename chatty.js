@@ -1,6 +1,6 @@
 var Chatty = (function() {
 
-    var messagess = [];
+    var messages = [];
 
     return {
         loadMessages: function(callbackFunc) {
