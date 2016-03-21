@@ -1,6 +1,6 @@
 var Chatty = (function() {
 
-    var messagess = [];
+    var messages = [];
 
     return {
         loadMessages: function(callbackFunc) {
@@ -16,14 +16,15 @@ var Chatty = (function() {
             messagesReq.addEventListener("load", messagesSuccess);
             messagesReq.addEventListener("failed", failedExecution);
 
-            //Step 4: Translate into JS
+             //Step 4: If json fails to load
             function failedExecution() {
                 alert("Error loading page. Please refresh.")
             };
 
-            //Step 5: Create callback for once the messages page loads
+            //Step 5: Translate into JS
+            //Step 6: Create callback for once the messages page loads
             function messagesSuccess() {
-                messagess = JSON.parse(this.responseText);
+                messages = JSON.parse(this.responseText);
                 callbackFunc();
             };
         }, 
