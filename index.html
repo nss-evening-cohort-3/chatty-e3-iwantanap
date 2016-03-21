@@ -12,22 +12,23 @@
   <body class=""> <!-- The class of 'dark-theme' needs to be added to body to flip the theme -->
 
     <!-- Building the nav bar -->
-    <nav class="navbar navbar-fixed-top">
-      <div class="navbar-header">
+
+      <nav class="navbar navbar-fixed-top">
         <p class="navbar-brand nav-font">Chatty!</p>
-      </div>
-      <div class="container">
-        <div class="col-md-9">
-          <input type="text" id="message-input" class="form-control navbar-btn" placeholder="Enter Message...">
-        </div>
-        <button type="button" id="clear-board" class="btn btn-default navbar-btn">Clear Message Board</button>
-      </div>
-    </nav>
+        <form class="navbar-form navbar-left">
+          <div class="form-group container-fluid">
+            <input type="text" id="message-input" class="form-control input-width" placeholder="Enter Message...">
+            <button type="button" id="clear-board" class="btn btn-default">Clear Message Board</button>
+          </div>
+        </form>
+      </nav>
+
     <!-- End of the nav bar -->
 
     <!-- Building the checkbox bar -->
-    <div id="checkbox-area" class="container">
-      <div class="col-lg-3 col-md-offset-1">
+    <div id="checkbox-area" class="container-fluid">
+    <div class="row">
+      <div class="col-xs-5 col-xs-offset-2 col-sm-5 col-sm-offset-2">
       <label class="checkbox-inline">
         <input type="checkbox" id="dark-theme" value="darktheme"> Dark Theme
       </label>
@@ -35,73 +36,74 @@
         <input type="checkbox" id="large-text" value="largetext"> Large Text
       </label>
       </div>
+      </div>
     </div>
     <!-- End of the checkbox bar -->
 
     <!-- The container for the messages title -->
-    <div class="container">
-        <p>Messages:</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2 col-sm-2-offset">
+          <p>Messages:</p>
+        </div>
+      </div>
     </div>
     <!-- End of the Messages bar -->
 
     <!-- The container for the messages text -->
-    <div id="message-area" class="container "> <!-- The class of 'larger-text' needs to be added to body to make the message text larger -->
+    <div id="message-area" class="container"> <!-- The class of 'larger-text' needs to be added to body to make the message text larger -->
 
 <!-- This is demo text with styling to post the messages and the edit/delete buttons and have them line up nicely and to test the behavior of the display box-->
-      <div class="container">    
-        <div class="col-md-10">
-          <p class="time-stamp">2016-03-19, 10:35pm - By Anonymous</p>
+      <div class="container-fluid">    
+        <div class="col-md-12">
+          <span class="time-stamp inline">2016-03-19, 10:35pm - By Anonymous</span>
+                  <div class="btn-group btn-group-sm" role="group">
+          <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
+          <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
+        </div>
           <p class="message-text">Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
         </div>
-        <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
-        <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
       </div>
-
-      <div class="container">    
-        <div class="col-md-10">
-          <p class="time-stamp">2016-03-19, 10:35pm - By Anonymous</p>
-          <p>Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+      <div class="container-fluid">    
+        <div class="col-md-12">
+          <span class="time-stamp inline">2016-03-19, 10:35pm - By Anonymous</span>
+                  <div class="btn-group btn-group-sm" role="group">
+          <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
+          <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
         </div>
-        <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
-        <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
-      </div>
-
-      <div class="container">    
-        <div class="col-md-10">
-          <p class="time-stamp">2016-03-19, 10:35pm - By Anonymous</p>
-          <p>Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+          <p class="message-text">Here is some generic text.</p>
         </div>
-        <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
-        <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
       </div>
-
-      <div class="container">    
-        <div class="col-md-10">
-          <p class="time-stamp">2016-03-19, 10:35pm - By Anonymous</p>
-          <p>Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+      <div class="container-fluid">    
+        <div class="col-md-12">
+          <span class="time-stamp inline">2016-03-19, 10:35pm - By Anonymous</span>
+                  <div class="btn-group btn-group-sm" role="group">
+          <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
+          <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
         </div>
-        <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
-        <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
-      </div>
-
-      <div class="container">    
-        <div class="col-md-10">
-          <p class="time-stamp">2016-03-19, 10:35pm - By Anonymous</p>
-          <p>Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+          <p class="message-text">Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
         </div>
-        <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
-        <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
       </div>
-
-      <div class="container">    
-        <div class="col-md-10">
-          <p class="time-stamp">2016-03-19, 10:35pm - By Anonymous</p>
-          <p>Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+      <div class="container-fluid">    
+        <div class="col-md-12">
+          <span class="time-stamp inline">2016-03-19, 10:35pm - By Anonymous</span>
+                  <div class="btn-group btn-group-sm" role="group">
+          <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
+          <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
         </div>
-        <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
-        <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
+          <p class="message-text">Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+        </div>
       </div>
-
+      <div class="container-fluid">    
+        <div class="col-md-12">
+          <span class="time-stamp inline">2016-03-19, 10:35pm - By Anonymous</span>
+                  <div class="btn-group btn-group-sm" role="group">
+          <button id="edit-btn" class="btn btn-default navbar-btn">Edit</button>
+          <button id="delete-btn" class="btn btn-default navbar-btn">Delete</button>
+        </div>
+          <p class="message-text">Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place. Here is some generic text to check out. I wanted to see how the text wrapped when a long line is added in a bootstrap styled row with a button. This line of text is really long and although me screen size is 19 inches it seems to wrap ok and keep the Delete button in place.</p>
+        </div>
+      </div>
 
 <!-- End of the Demo Text-->
 
