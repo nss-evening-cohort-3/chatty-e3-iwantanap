@@ -1,0 +1,59 @@
+/*Needed for the Bootstrap nav bar also default 'light-theme'*/
+body { 
+  box-sizing: border-box;
+  font-size: 1.75em;
+  padding-top: 50px;
+  color: #727272;
+  background-color: #f8f8f8;
+}
+
+/*For the title font in the nav area*/
+.nav-font {
+  font-family: 'Lobster Two', cursive;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+/*Sizing of the message area div*/
+#message-area {
+  width: 90%;
+  padding: 2% 3% 2% 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 2px solid lightgray;
+}
+
+/*For the checked 'Dark Theme' Checkbox*/
+.dark-theme {
+  font-size: 1.75em;
+  color: #f8f8f8;
+  background-color: gray;
+}
+
+/*For the checked 'Large Text Checkbox'*/
+.larger-text {
+  font-size: 2.5rem;
+}
+
+/*Gives some space between messages*/
+.message-text {
+  margin-bottom: 1.75rem;
+}
+
+/*Gives a different font to the bonus timestamp*/
+.time-stamp {
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: courier;
+  text-decoration: underline;
+  margin: 0;
+}
+
+/*Lengthens the message input*/
+.input-width {
+  min-width: 50vw;
+}
