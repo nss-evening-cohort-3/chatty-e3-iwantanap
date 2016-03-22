@@ -190,5 +190,25 @@
       "user": "Pat",
       "id": -1
     }
+  ],
+  "empty": [
+    {
+      "message": "WRITE A MESSAGE YOU ARSEHOLE!",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Only an whordiot wouldn't write a message before hitting the enter key.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "You come into OUR HOUSE and send a BLANK MESSAGE! GOOD DAY, SIR!",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    }
   ]
 }
