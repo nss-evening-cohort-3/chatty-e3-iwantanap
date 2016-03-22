@@ -9,6 +9,7 @@ var Chatty = (function(oldChatty) {
         }
         document.getElementById("message-area").innerHTML = buildString;
         Chatty.checkClearButton();
+        Chatty.stopEditDelete();
     };
 
     oldChatty.checkClearButton = function() {
