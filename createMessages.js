@@ -4,7 +4,7 @@ var id = 5;
 
     oldChatty.createNewMessage = function() {
         var newMessage = {};
-        newMessage.message = document.getElementById("message-input").value;
+        newMessage.message = Chatty.addEmoji(document.getElementById("message-input").value);
         newMessage.timestamp = new Date();
         newMessage.user = Chatty.selectUsers();
         newMessage.id = id;
@@ -15,7 +15,6 @@ var id = 5;
             Chatty.onToDom();
         }
     };
-
 
     return oldChatty
 }(Chatty));
