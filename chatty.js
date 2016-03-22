@@ -31,6 +31,10 @@ var Chatty = (function() {
 
         addMessages: function(newMessageObject) {
             messages.push(newMessageObject);
+        },
+
+        deleteMessage: function(msgId) {
+            messages.splice(msgId, 1);
         }, 
 
         getMessages: function() {

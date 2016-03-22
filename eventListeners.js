@@ -19,8 +19,8 @@ chattyBody.addEventListener("click", function(e) {
     // deleteAllMessages(e);
   }
   if (event.target.className.includes("deleteThisMessage") === true) {
-    console.log(" Chatty.deleteSingleMessage", e);
-    // Chatty.deleteSingleMessage(e)
+    thisMessage = e.target.parentElement.parentElement.parentElement.id;
+    Chatty.deleteSingleMessage(thisMessage);
   }
 
   if (event.target.id === "dark-theme" && event.target.checked === true) {

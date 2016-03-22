@@ -1,8 +1,14 @@
 var Chatty = (function(oldChatty) {
 
 
-    oldChatty.deleteThisMessage = function(id) {
-        
+    oldChatty.deleteSingleMessage = function(msgId) {
+        for (var deleteThisId in Chatty.getMessages()) {
+            if (Chatty.getMessages()[deleteThisId].id == msgId) {
+                Chatty.deleteMessage(deleteThisId);
+                Chatty.onToDom();
+                break;
+            }
+        }
     };
 
 
