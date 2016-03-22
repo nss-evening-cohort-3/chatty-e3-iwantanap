@@ -17,7 +17,12 @@
         <p class="navbar-brand nav-font">Chatty!</p>
         <form class="navbar-form navbar-left" onsubmit="return false">
           <div class="form-group container-fluid">
-            <input type="text" id="message-input" class="form-control input-width" placeholder="Enter Message...">
+            <input type="text" id="message-input" class="form-control input-width" placeholder="Enter Message - press Return Key to submit">
+            <!-- User dropdown in nav bar -->
+            <select id="user-dropdown">
+              <option value="default">Select User</option>
+              <option value="addUser">+Add User</option>
+            </select>
             <button type="button" id="clear-board" class="btn btn-default">Clear Message Board</button>
           </div>
         </form>
@@ -62,6 +67,7 @@
   <script src="createMessages.js"></script>
   <script src="addMessages.js"></script>
   <script src="deleteMessage.js"></script>
+  <script src="users.js"></script>
   <script src="eventListeners.js"></script>
   <script src="start.js"></script>
   </body>
