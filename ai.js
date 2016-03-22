@@ -3,7 +3,6 @@ var Chatty = (function(oldChatty) {
   var aiXML = new XMLHttpRequest();
   aiXML.addEventListener("load", function(){
     ai = JSON.parse(this.responseText)
-    console.log(ai)
   });
   aiXML.open("GET", "ai.json");
   aiXML.send();
@@ -24,6 +23,9 @@ var Chatty = (function(oldChatty) {
     }
     Chatty.addMessages(textAI)
     Chatty.onToDom()
+    for (let i=0; i<2; i++) {
+      document.getElementById("-1").getElementsByTagName('div')[1].getElementsByTagName('button')[i].disabled = true
+    };
   }
 
   return Chatty

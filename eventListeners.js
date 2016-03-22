@@ -8,6 +8,7 @@ chattyBody.addEventListener("keypress", function(e) {
   if (event.target.id === "message-input" && event.code === "Enter") {
     Chatty.createNewMessage();
     setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))
+    document.getElementById("message-input").value = ""
   }
 });
 
