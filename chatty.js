@@ -24,9 +24,17 @@ var Chatty = (function() {
             //Step 5: Translate into JS
             //Step 6: Create callback for once the messages page loads
             function messagesSuccess() {
-                messages = JSON.parse(this.responseText);
+                messages = JSON.parse(this.responseText).messages;
                 callbackFunc();
             };
+        },
+
+        addMessages: function(newMessageObject) {
+            messages.push(newMessageObject);
+        },
+
+        deleteMessage: function(msgId) {
+            messages.splice(msgId, 1);
         }, 
 
         getMessages: function() {
