@@ -5,7 +5,7 @@ var id = 5;
     oldChatty.createNewMessage = function() {
         var newMessage = {};
         newMessage.message = document.getElementById("message-input").value;
-        newMessage.timestamp = Date.now();
+        newMessage.timestamp = new Date();
         newMessage.user = "butt";
         newMessage.id = id;
         id++
