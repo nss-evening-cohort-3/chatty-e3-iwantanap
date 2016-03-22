@@ -6,11 +6,14 @@ var id = 5;
         var newMessage = {};
         newMessage.message = document.getElementById("message-input").value;
         newMessage.timestamp = new Date();
-        newMessage.user = "butt";
+        newMessage.user = Chatty.selectUsers();
         newMessage.id = id;
-        id++
-        Chatty.addMessages(newMessage);
-        Chatty.onToDom();
+        if (newMessage.user !== undefined) {
+            newMessage.user = newMessage.user.charAt(0).toUpperCase() + newMessage.user.slice(1);
+            id++
+            Chatty.addMessages(newMessage);
+            Chatty.onToDom();
+        }
     };
 
 

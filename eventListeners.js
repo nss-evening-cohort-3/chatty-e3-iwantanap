@@ -47,5 +47,4 @@ chattyBody.addEventListener("change", function(e){
     var newUser = prompt("Name of new user");
     Chatty.addUsers(newUser);
   }
-
 });

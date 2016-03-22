@@ -8,7 +8,7 @@ var Chatty = (function(oldChatty) {
         users.names.push(newUser);
         Chatty.addUsersToDom();
         console.log("users", users);
-    }
+    };
 
     oldChatty.addUsersToDom = function() {
         var userArray = users.names;
@@ -16,7 +16,16 @@ var Chatty = (function(oldChatty) {
         for (var i = 0; i < userArray.length; i++) {
             buildUserDropDown += `<option value=${userArray[i].toLowerCase()}>${userArray[i]}</option>`
         }
-        document.getElementById("user-dropdown").innerHTML = `<option value="default">Select User</option>` + buildUserDropDown + `<option value="addUser">+Add User</option>`;
+        document.getElementById("user-dropdown").innerHTML = `<option value="defaultVal">Select User</option>` + buildUserDropDown + `<option value="addUser">+Add User</option>`;
+    };
+
+    oldChatty.selectUsers = function(userValue) {
+        var selectedUser = document.getElementById("user-dropdown").value;
+        if (selectedUser === "defaultVal") {
+            alert("Select a user, bozo.")
+        } else {
+            return selectedUser;
+        }
     }
 
     
