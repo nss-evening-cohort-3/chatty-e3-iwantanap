@@ -7,7 +7,6 @@ var Chatty = (function(oldChatty) {
     oldChatty.addUsers = function(newUser) {
         users.names.push(newUser);
         Chatty.addUsersToDom();
-        console.log("users", users);
     };
 
     oldChatty.addUsersToDom = function() {

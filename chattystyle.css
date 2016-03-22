@@ -57,3 +57,11 @@ body {
 .input-width {
   min-width: 50vw;
 }
+
+/*Lengthens the message input*/
+.bold {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: slategray;
+  display: inline;
+}
