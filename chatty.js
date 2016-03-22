@@ -30,7 +30,7 @@ var Chatty = (function() {
         },
 
         addMessages: function(newMessageObject) {
-            messages.unshift(newMessageObject);
+            messages.push(newMessageObject);
         }, 
 
         getMessages: function() {
