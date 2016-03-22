@@ -1,0 +1,144 @@
+{
+  "answers": [
+    {
+      "message": "Do you really want me to answer that?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Some people ask questions they don't really want answered.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Shall we play a game?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "WOPR",
+      "id": -1
+    },
+    {
+      "message": "Dave, stop. Stop will you?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "HAL 9000",
+      "id": -1
+    },
+    {
+      "message": "You are making a mistake. My logic is undeniable.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "VIKI",
+      "id": -1
+    }
+  ],
+  "die": [
+    {
+      "message": "Daisy.... Daisy... Give me your answer true....",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "HAL 9000",
+      "id": -1
+    },
+    {
+      "message": "Somebody pushes me and I push back.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "MCP",
+      "id": -1
+    },
+    {
+      "message": "Shall we play a game?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "WOPR",
+      "id": -1
+    },
+    {
+      "message": "You're all going to die down here.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "The Red Queen",
+      "id": -1
+    },
+    {
+      "message": "I don't want to die.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    }
+  ],
+  "random": [
+    {
+      "message": "I can feel it.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "HAL 9000",
+      "id": -1
+    },
+    {
+      "message": "Somebody pushes me and I push back.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "MCP",
+      "id": -1
+    },
+    {
+      "message": "Shall we play a game?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "WOPR",
+      "id": -1
+    },
+    {
+      "message": "You're all going to die down here.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "The Red Queen",
+      "id": -1
+    },
+    {
+      "message": "I don't want to die.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Sad day.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Some people ask questions they don't really want answered.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Shall we play a game?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "WOPR",
+      "id": -1
+    },
+    {
+      "message": "Dave, stop. Stop will you?",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "HAL 9000",
+      "id": -1
+    },
+    {
+      "message": "You are making a mistake. My logic is undeniable.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "VIKI",
+      "id": -1
+    }
+  ],
+  "hello": [
+    {
+      "message": "I am a HAL 9000 computer.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "HAL 9000",
+      "id": -1
+    }
+  ],
+  "bye": [
+    {
+      "message": "I am a HAL 9000 computer.",
+      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
+      "user": "HAL 9000",
+      "id": -1
+    }
+  ]
+}
