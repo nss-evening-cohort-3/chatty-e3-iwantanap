@@ -25,23 +25,19 @@ chattyBody.addEventListener("click", function(e) {
   }
 
   if (event.target.id === "dark-theme" && event.target.checked === true) {
-    console.log("goToDarkTheme", e);
-    // goToDarkTheme(e);
+    chattyBody.classList.add("dark-theme");
   }
 
   if (event.target.id === "dark-theme" && event.target.checked === false) {
-    console.log("goToLightTheme", e);
-    // goToLightTheme(e);
+    chattyBody.classList.remove("dark-theme");
   }
 
   if (event.target.id === "large-text" && event.target.checked === true) {
-    console.log("goToLargeText", e);
-    // goToLargeText(e);
+    document.getElementById("message-area").classList.add("larger-text");
   }
 
   if (event.target.id === "large-text" && event.target.checked === false) {
-    console.log("goToRegText", e);
-    // goToRegText(e);
+    document.getElementById("message-area").classList.remove("larger-text");
   }
 
 });
