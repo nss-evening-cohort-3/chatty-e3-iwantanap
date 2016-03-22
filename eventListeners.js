@@ -8,7 +8,7 @@ if (document.getElementById("message-area").innerHTML === "") {
 chattyBody.addEventListener("keypress", function(e) {
   // NAV: When return key is detected, you'll create a new message.
   if (event.target.id === "message-input" && event.code === "Enter") {
-    createNewMessage(e);
+    Chatty.createNewMessage();
   }
 });
 
