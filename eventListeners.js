@@ -1,9 +1,7 @@
 var chattyBody = document.querySelector("body");
 
 // NAV: If there are no messages, then the clear messages button should be disabled (see example above).
-if (document.getElementById("message-area").innerHTML === "") {
-  document.getElementById("clear-board").setAttribute("disabled", "disabled");
-}
+
 
 chattyBody.addEventListener("keypress", function(e) {
   // NAV: When return key is detected, you'll create a new message.
@@ -14,10 +12,13 @@ chattyBody.addEventListener("keypress", function(e) {
 
 chattyBody.addEventListener("click", function(e) {
   // NAV: When the user clicks the clear messages button, all current chat messages should be removed from the application.
-  if (event.target.id === "clear-board" /* && BUTTON IS ENABLED*/) {
-    console.log("deleteAllMessages", e);
-    // deleteAllMessages(e);
+  if (event.target.id === "clear-board") {
+    for (var i = Chatty.getMessages().length - 1; i > (Chatty.getMessages().length - 21) && i > -1; i--) {
+      Chatty.deleteMessage(i);
+      Chatty.onToDom();
+    }
   }
+
   if (event.target.className.includes("deleteThisMessage") === true) {
     thisMessage = e.target.parentElement.parentElement.parentElement.id;
     Chatty.deleteSingleMessage(thisMessage);
