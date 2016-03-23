@@ -7,9 +7,14 @@ var chattyBody = document.querySelector("body");
 chattyBody.addEventListener("keypress", function(e) {
   // NAV: When return key is detected, you'll create a new message.
   if (event.target.id === "message-input" && event.code === "Enter") {
-    Chatty.createNewMessage();
-    setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))
-    document.getElementById("message-input").value = ""
+    var selectedUser = document.getElementById("user-dropdown").value;
+      if (selectedUser === "defaultVal") {
+            alert("Select a user, bozo.")
+      } else {
+      Chatty.createNewMessage();
+      setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))
+      document.getElementById("message-input").value = ""
+    }
   }
 });
 
