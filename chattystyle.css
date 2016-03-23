@@ -42,7 +42,7 @@ body {
   background-color: gray;
 }
 
-.dark-theme p{
+.dark-theme p {
   color: #f8f8f8;
 }
 
@@ -72,4 +72,285 @@ body {
 /*Lengthens the message input*/
 .input-width {
   min-width: 50vw;
+}
+
+/***************************** SETS STYLE FOR THEME 1 (Girl Notebook) ********************************/
+/*Main Theme Assets*/
+.theme1 {
+  background-color: #3CB4B9;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+}
+
+/*Main Theme Assets*/
+.theme1 #message-area {
+  background-color: #F0D5F7;
+  color: #3CB4B9;
+}
+
+/*Overrides Logo Assets*/
+.theme1 .nav-font {
+  font-family: 'Bonbon', cursive;
+  font-size: 3em;
+}
+
+/*Overrides Timestamp Styling*/
+.theme1 .time-stamp{
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*Overrides User Styling*/
+.theme1 .time-stamp .bold {
+  font-family: 'Bonbon', cursive;
+  color: #FF53D5;
+}
+
+/*Overrides Button Styling*/
+.theme1 button {
+  border: 3px solid #FF53D5;
+  background-color: #FF9A04;
+  color: white;
+}
+
+.theme1 .editThisMessage,
+.theme1 .deleteThisMessage {
+  font-size: 1.1em;
+}
+
+.theme1 button:hover,
+.theme1 button:focus {
+  border: 3px solid #FF9A04;
+  background-color: #FF53D5;
+  color: white;
+}
+
+.theme1 button:disabled:hover {
+  border: 3px solid #FF9A04;
+  background-color: #FF53D5;
+  color: white;
+}
+
+/*Styles Every Other Message*/
+.theme1 #message-area .container-fluid:nth-child(2n+1) {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+/***************************** SETS STYLE FOR THEME 2 (Spacejam) ********************************/
+/*Main Theme Assets*/
+.theme2 {
+  background: url(img/theme2space.jpg) black center center fixed;
+  color: white;
+  font-family: 'Michroma', sans-serif;
+  font-size: .9em;
+}
+
+/*Main Theme Assets*/
+.theme2 #message-area {
+  background-color: #08469D;
+  color: #D3D572;
+}
+
+/*Overrides Logo Assets*/
+.theme2 .nav-font {
+  font-family: 'Michroma', sans-serif;
+  font-size: 3em;
+}
+
+/*Overrides Timestamp Styling*/
+.theme2 .time-stamp{
+  font-family: 'Michroma', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*Overrides User Styling*/
+.theme2 .time-stamp .bold {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+  color: #CD5615;
+  font-size: 1.5em;
+}
+
+/*Overrides Button Styling*/
+.theme2 button {
+  border: 3px solid #CD5615;
+  background-color: #F6CB1C;
+  color: #CD5615;
+}
+
+.theme2 .editThisMessage,
+.theme2 .deleteThisMessage {
+  font-size: 1.1em;
+}
+
+.theme2 button:hover,
+.theme2 button:focus {
+  border: 3px solid #F6CB1C;
+  background-color: #CD5615;
+  color: #F6CB1C;
+}
+
+.theme2 button:disabled:hover {
+  border: 3px solid #F6CB1C;
+  background-color: #CD5615;
+  color: #F6CB1C;
+}
+
+/*Styles Every Other Message*/
+.theme2 #message-area .container-fluid:nth-child(2n+1) {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+/***************************** SETS STYLE FOR THEME 3 (Slate Boring) ********************************/
+/*Main Theme Assets*/
+.theme3 {
+  background-color: #272b30;
+  color: #c8c8c8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+}
+
+/*Main Theme Assets*/
+.theme3 #message-area {
+  background-color: #1c1e22;
+  color: white;
+}
+
+/*Overrides Logo Assets*/
+.theme3 .nav-font {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+}
+
+/*Overrides Timestamp Styling*/
+.theme3 .time-stamp{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*Overrides User Styling*/
+.theme3 .time-stamp .bold {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: lightblue;
+}
+
+/*Overrides Button Styling*/
+.theme3 button {
+  border: 3px solid #3e444c;
+  background-color: #c8c8c8;
+  color: #3e444c;
+}
+
+.theme3 .editThisMessage,
+.theme3 .deleteThisMessage {
+  font-size: 1.1em;
+}
+
+.theme3 button:hover,
+.theme3 button:focus {
+  border: 3px solid #ffffff;
+  background-color: #3e444c;
+  color: #ffffff;
+}
+
+.theme3 button:disabled:hover {
+  border: 3px solid #ffffff;
+  background-color: #3e444c;
+  color: #ffffff;
+}
+
+/*Styles Every Other Message*/
+.theme3 #message-area .container-fluid:nth-child(2n+1) {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+/***************************** SETS STYLE FOR THEME 4 (Pyro) ********************************/
+/*Main Theme Assets*/
+.theme4 {
+  background-color: #272b30;
+  color: #c8c8c8;
+  font-family: 'Candal', sans-serif;
+  font-size: 1.2em;
+}
+
+/*Main Theme Assets*/
+.theme4 #message-area {
+  background-color: firebrick;
+  color: white;
+  animation: animationBox 1s ease-in-out infinite alternate;
+}
+
+/*Really awesome firey background animation*/
+@keyframes animationBox
+{0% {box-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #feec85,
+  -20px -20px 40px #ffae34,
+  20px -40px 50px #ec760c,
+  -20px -60px 60px #cd4606,
+  0 -80px 70px #973716,
+  10px -90px 80px #451b0e;}
+100% {box-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #fefcc9,
+  -20px -20px 40px #feec85,
+  22px -42px 60px #ffae34,
+  -22px -58px 50px #ec760c,
+  0 -82px 80px #cd4606,
+  10px -90px 80px  #973716;}}
+
+/*Overrides Logo Assets*/
+.theme4 .nav-font {
+  color: firebrick;
+  font-size: 4em;
+  text-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #feec85,
+  -20px -20px 40px #ffae34,
+  20px -40px 50px #ec760c,
+  -20px -60px 60px #cd4606,
+  0 -80px 70px #973716,
+  10px -90px 80px #451b0e;
+}
+
+/*Overrides Timestamp Styling*/
+.theme4 .time-stamp{
+  font-family: 'Candal', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*Overrides User Styling*/
+.theme4 .time-stamp .bold {
+  font-family: 'Candal', sans-serif;
+  color: #ffae34;
+}
+
+/*Overrides Button Styling*/
+.theme4 button {
+  border: 3px solid #3e444c;
+  background-color: #c8c8c8;
+  color: #3e444c;
+}
+
+.theme4 .editThisMessage,
+.theme4 .deleteThisMessage {
+  font-size: 1.1em;
+}
+
+.theme4 button:hover,
+.theme4 button:focus {
+  border: 3px solid #ffffff;
+  background-color: #ec760c;
+  color: #ffffff;
+}
+
+.theme4 button:disabled:hover {
+  border: 3px solid #ffffff;
+  background-color: #ec760c;
+  color: #ffffff;
+}
+
+/*Styles Every Other Message*/
+.theme4 #message-area .container-fluid:nth-child(2n+1) {
+  background-color: rgba(255, 255, 255, .2);
 }

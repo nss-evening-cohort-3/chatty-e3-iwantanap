@@ -27,7 +27,7 @@ chattyBody.addEventListener("click", function(e) {
   }
 
   if (event.target.id === "dark-theme" && event.target.checked === true) {
-    chattyBody.classList.add("dark-theme");
+    chattyBody.classList.add("theme4");
   }
 
   if (event.target.id === "dark-theme" && event.target.checked === false) {
