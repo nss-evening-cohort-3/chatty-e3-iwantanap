@@ -12,9 +12,18 @@ var Chatty = ( (oldChatty) => {
 // Adds Emoji to any newly commited message
   oldChatty.addEmoji = (sentMessageString) => {
     for (let emojiKey in emojiList) {
-
       if (sentMessageString.includes(emojiKey)) {
           sentMessageString = sentMessageString.replace(emojiKey, emojiList[emojiKey]);
+      };
+    };
+      return sentMessageString;
+  };
+
+  // Adds Emoji to any newly commited message
+  oldChatty.removeEmoji = (sentMessageString) => {
+    for (let emojiKey in emojiList) {
+      if (sentMessageString.includes(emojiList[emojiKey])) {
+          sentMessageString = sentMessageString.replace(emojiList[emojiKey], emojiKey);
       };
     };
       return sentMessageString;
