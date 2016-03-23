@@ -1,3 +1,4 @@
+"use strict"
 var Chatty = (function(oldChatty) {
   var ai = [];
   var aiXML = new XMLHttpRequest();
@@ -10,7 +11,9 @@ var Chatty = (function(oldChatty) {
   oldChatty.chooseAI = function() {
     let textAI = {};
     var msgString = Chatty.getMessages()[Chatty.getMessages().length-1].message;
-    if (msgString.indexOf("?") >= 0) {
+    if (msgString === "") {
+      textAI = ai.empty[Math.floor(Math.random()* ai.empty.length)];
+    } else if (msgString.indexOf("?") >= 0) {
       textAI = ai.answers[Math.floor(Math.random()* ai.answers.length)];
     } else if (msgString.toLowerCase().indexOf("hello") >=0) {
       textAI = ai.hello[Math.floor(Math.random()* ai.hello.length)];
@@ -23,6 +26,7 @@ var Chatty = (function(oldChatty) {
     } else {
       textAI = ai.random[Math.floor(Math.random()* ai.random.length)];
     }
+    textAI.timestamp = new Date();
     Chatty.addMessages(textAI);
     Chatty.onToDom();
   }

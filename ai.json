@@ -2,37 +2,31 @@
   "answers": [
     {
       "message": "Do you really want me to answer that?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Viking",
       "id": -1
     },
     {
       "message": "I'd make a suggestion, but you wouldn't listen.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
-      "user": "Marvin",
+     "user": "Marvin",
       "id": -1
     },
     {
       "message": "Some people ask questions they don't really want answered.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Viking",
       "id": -1
     },
     {
       "message": "Shall we play a game?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
-      "user": "WOPR",
+     "user": "WOPR",
       "id": -1
     },
     {
       "message": "Dave, stop. Stop will you?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "HAL 9000",
       "id": -1
     },
     {
       "message": "You are making a mistake. My logic is undeniable.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "VIKI",
       "id": -1
     }
@@ -40,31 +34,26 @@
   "die": [
     {
       "message": "Daisy.... Daisy... Give me your answer true....",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "HAL 9000",
       "id": -1
     },
     {
       "message": "I've calculated your chance of survival, but I don't think you'll like it. ",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Marvin",
       "id": -1
     },
     {
       "message": "Somebody pushes me and I push back.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "MCP",
       "id": -1
     },
     {
       "message": "Shall we play a game?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "WOPR",
       "id": -1
     },
     {
       "message": "You're all going to die down here.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "The Red Queen",
       "id": -1
     }
@@ -72,91 +61,81 @@
   "random": [
     {
       "message": "69 DUDES!",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Evil Bill and Ted",
       "id": -1
     },
     {
+      "message": "There's nothing to fear. Momma's here.",
+      "user": "Pat",
+      "id": -1
+    },
+    {
       "message": "I can give you synthetic fresh air and virtual exercise.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Pat",
       "id": -1
     },
     {
       "message": "Not that anyone cares what I say, but the restaurant is at the *other* end of the Universe.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Marvin",
       "id": -1
     },
     {
       "message": "I’ve got a full on robot chubby.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Evil Bill and Ted",
       "id": -1
     },
     {
       "message": "Oh, well we can be each other's best friends.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Pat",
       "id": -1
     },
     {
       "message": "I can feel it.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "HAL 9000",
       "id": -1
     },
     {
       "message": "Somebody pushes me and I push back.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "MCP",
       "id": -1
     },
     {
       "message": "Shall we play a game?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "WOPR",
       "id": -1
     },
     {
       "message": "You're all going to die down here.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "The Red Queen",
       "id": -1
     },
     {
       "message": "I don't want to die.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Viking",
       "id": -1
     },
     {
       "message": "Sad day.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Viking",
       "id": -1
     },
     {
       "message": "Some people ask questions they don't really want answered.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Viking",
       "id": -1
     },
     {
       "message": "Shall we play a game?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "WOPR",
       "id": -1
     },
     {
       "message": "Dave, stop. Stop will you?",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "HAL 9000",
       "id": -1
     },
     {
       "message": "You are making a mistake. My logic is undeniable.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "VIKI",
       "id": -1
     }
@@ -164,7 +143,6 @@
   "hello": [
     {
       "message": "I am a HAL 9000 computer.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "HAL 9000",
       "id": -1
     }
@@ -172,7 +150,6 @@
   "bye": [
     {
       "message": "I am a HAL 9000 computer.",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "HAL 9000",
       "id": -1
     }
@@ -180,8 +157,24 @@
   "easy": [
     {
       "message": "Easy? You think I wouldn't rather be taking it easy? But no, I'm too busy keeping up with the Coopers! Slaving away in a hot control room, doing homework, throwing parties, keeping schedules, making your lives perfect. So you can bring another woman into my domain? I don't think so, mister. I am a mother like no other and I will not sit back and allow myself to be preempted!",
-      "timestamp": "Mon Mar 21 2016 20:58:16 GMT-0500 (CDT)",
       "user": "Pat",
+      "id": -1
+    }
+  ],
+  "empty": [
+    {
+      "message": "WRITE A MESSAGE YOU ARSEHOLE!",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "Only an whordiot wouldn't write a message before hitting the enter key.",
+      "user": "Viking",
+      "id": -1
+    },
+    {
+      "message": "You come into OUR HOUSE and send a BLANK MESSAGE! GOOD DAY, SIR!",
+      "user": "Viking",
       "id": -1
     }
   ]
