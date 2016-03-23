@@ -13,10 +13,12 @@ chattyBody.addEventListener("keypress", function(e) {
   }
 });
 
+
 chattyBody.addEventListener("click", function(e) {
   // NAV: When the user clicks the clear messages button, all current chat messages should be removed from the application.
   if (event.target.id === "clear-board") {
-    for (var i = Chatty.getMessages().length - 1; i > (Chatty.getMessages().length - 21) && i > -1; i--) {
+    var boardLeftovers = Chatty.getMessages().length - 21;
+    for (var i = Chatty.getMessages().length - 1; i > boardLeftovers && i > -1; i--) {
       Chatty.deleteMessage(i);
       Chatty.onToDom();
     }
