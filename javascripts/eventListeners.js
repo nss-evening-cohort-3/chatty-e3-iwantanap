@@ -74,6 +74,10 @@ chattyBody.addEventListener("click", function(e) {
 chattyBody.addEventListener("change", function(e){
   if (event.target.tagName === "SELECT" && event.target.value === "addUser") {
     var newUser = prompt("Name of new user");
-    Chatty.addUsers(newUser);
+    if (newUser !== "") {
+      Chatty.addUsers(newUser);
+    } else {
+      newUser = prompt("Name of new user");
+    }
   }
 });
