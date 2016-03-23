@@ -400,3 +400,7 @@ body {
   font-size: 2em;
   width: 10%;
 }
+
+#themeModal h3 {
+  margin: 7px;
+}
