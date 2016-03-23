@@ -24,8 +24,10 @@
 
 
 ### Technologies Used:
-> 1. CSS: 
-> 2.
+> 1. CSS: Themes, Boostrap Overrides, Basic Styling
+> 2. [Bootstrap](https://github.com/twbs/bootstrap): Nav, Modals, Buttons 
+> 3. [JQuery](https://github.com/jquery/jquery): Modals for Bootsrap
+> 4. JavaScript: IIFE and augmentation, XHR, JSON, Event Listeners, DOM Manipulation
 
 ### Final Result:
 > Enter Results Here
