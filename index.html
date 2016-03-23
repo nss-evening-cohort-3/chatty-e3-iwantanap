@@ -9,37 +9,41 @@
     <link rel="stylesheet" type="text/css" href="chattystyle.css">
     <title>Chatty (I-Want-A-Nap)</title>
   </head>
-  <body class=""> <!-- The class of 'dark-theme' needs to be added to body to flip the theme -->
+
+
+  <body class=""><!-- Themes needs to be added to sans modal to flip the theme -->
 
     <!-- Building the nav bar -->
-
       <nav class="navbar navbar-fixed-top">
-        <p class="navbar-brand nav-font">
-        <span>Chatty!</p>
+        <p class="navbar-brand nav-font">Chatty!</p>
         <form class="navbar-form navbar-left" onsubmit="return false">
           <div class="form-group container-fluid">
             <input type="text" id="message-input" class="form-control input-width" placeholder="Enter Message - press Return Key to submit">
             <!-- User dropdown in nav bar -->
+
             <select id="user-dropdown" class="form-control">
               <option value="defaultVal">Select User</option>
               <option value="addUser">+Add User</option>
             </select>
             <!-- End user dropdown in nav bar -->
-            <button type="button" id="clear-board" class="btn btn-default">Clear Message Board</button>
+            <button type="button" id="clear-board" class="btn btn-default"><span class="glyphicon glyphicon-alert"></span>Clear Message Board</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#themeModal"><span class="glyphicon glyphicon-picture"></span>Chatty Themes</button>
           </div>
         </form>
       </nav>
+      <!-- End of the nav bar -->
 
-    <!-- End of the nav bar -->
+      <!-- The container for the messages text -->
+      <div id="message-area" class="container"> <!-- The class of 'larger-text' needs to be added to body to make the message text larger -->
+      </div>
+      <!-- End of the container for the messages text -->
 
-    
-    <!-- MODAL FOR THEMESE -->
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#themeModal">
-      Chatty Themes
-    </button>
 
-    <!-- Modal -->
+    </div>
+    <!-- End of main body -->
+
+    <!-- MODAL FOR THEMES - If you put inside body, it applies themes to modal. -->
     <div class="modal fade" id="themeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -64,49 +68,35 @@
                   <div class="col-xs-6 col-xs-offset-1 col-sm-6 col-sm-offset-1">
                   <h3>Themes</h3>
                   <label class="radio">
-                    <input type="radio" name="themeSelect" id="theme1" value="theme1"> Theme 1
+                    <input type="radio" name="themeSelect" id="theme1" value="theme1"> Lisa Frank
                     <img src="img/monument@2x.png">
                   </label>
                   <label class="radio">
-                    <input type="radio" name="themeSelect" id="theme2" value="theme2"> Theme 2
+                    <input type="radio" name="themeSelect" id="theme2" value="theme2"> SpaceJam Phresh
                     <img src="img/monument@2x.png">
                   </label>
                   <label class="radio">
-                    <input type="radio" name="themeSelect" id="theme3" value="theme3"> Theme 3
+                    <input type="radio" name="themeSelect" id="theme3" value="theme3"> I'm Boring
                     <img src="img/monument@2x.png">
                   </label>
                   <label class="radio">
-                    <input type="radio" name="themeSelect" id="theme4" value="theme4"> Theme 4
+                    <input type="radio" name="themeSelect" id="theme4" value="theme4"> BURN WITH FIRE
                     <img src="img/monument@2x.png">
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="themeSelect" id="themeNone" value="themeNone"> Original
                   </label>
                   </div>
-                </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    </div>
-    <!-- End of the checkbox bar -->
-
-    <!-- The container for the messages title -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-2 col-sm-2-offset">
-          <h3>Messages:</h3>
-        </div>
-      </div>
-    </div>
-    <!-- End of the Messages bar -->
-
-    <!-- The container for the messages text -->
-    <div id="message-area" class="container"> <!-- The class of 'larger-text' needs to be added to body to make the message text larger -->
-    </div>
-    <!-- End of the container for the messages text -->
+    <!-- End of the MODAL-->
 
     
 

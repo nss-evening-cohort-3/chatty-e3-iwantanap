@@ -7,6 +7,10 @@ body {
   background-color: #f8f8f8;
 }
 
+.navbar {
+  width: 100%;
+}
+
 /*For the title font in the nav area*/
 .nav-font {
   font-family: 'Lobster Two', cursive;
@@ -27,27 +31,11 @@ body {
 #message-area {
   width: 90%;
   padding: 2% 3% 2% 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2em auto;
   height: 80vh;
   overflow-x: hidden;
   overflow-y: scroll;
   border: 2px solid lightgray;
-}
-
-/*For the checked 'Dark Theme' Checkbox*/
-.dark-theme {
-  font-size: 1.75em;
-  color: #f8f8f8;
-  background-color: gray;
-}
-
-.dark-theme p {
-  color: #f8f8f8;
-}
-
-.dark-theme select {
-  color: #727272;
 }
 
 /*For the checked 'Large Text Checkbox'*/
@@ -69,12 +57,18 @@ body {
   margin: 0;
 }
 
-/*Lengthens the message input*/
-.input-width {
-  min-width: 50vw;
+/*Gives icons some space*/
+.glyphicon {
+  padding: 0 5px;
 }
 
-/***************************** SETS STYLE FOR THEME 1 (Girl Notebook) ********************************/
+/*Lengthens the message input*/
+.input-width {
+  min-width: 40vw;
+}
+
+
+/***************************** SETS STYLE FOR THEME 1 (Lisa Frank) ********************************/
 /*Main Theme Assets*/
 .theme1 {
   background-color: #3CB4B9;
@@ -137,7 +131,7 @@ body {
   background-color: rgba(255, 255, 255, .2);
 }
 
-/***************************** SETS STYLE FOR THEME 2 (Spacejam) ********************************/
+/***************************** SETS STYLE FOR THEME 2 (SpaceJam Phresh) ********************************/
 /*Main Theme Assets*/
 .theme2 {
   background: url(img/theme2space.jpg) black center center fixed;
@@ -202,7 +196,7 @@ body {
   background-color: rgba(255, 255, 255, .2);
 }
 
-/***************************** SETS STYLE FOR THEME 3 (Slate Boring) ********************************/
+/***************************** SETS STYLE FOR THEME 3 (I'm Boring) ********************************/
 /*Main Theme Assets*/
 .theme3 {
   background-color: #272b30;
@@ -266,7 +260,7 @@ body {
   background-color: rgba(255, 255, 255, .2);
 }
 
-/***************************** SETS STYLE FOR THEME 4 (Pyro) ********************************/
+/***************************** SETS STYLE FOR THEME 4 (Burn with fire) ********************************/
 /*Main Theme Assets*/
 .theme4 {
   background-color: #272b30;
@@ -353,4 +347,55 @@ body {
 /*Styles Every Other Message*/
 .theme4 #message-area .container-fluid:nth-child(2n+1) {
   background-color: rgba(255, 255, 255, .2);
+}
+
+
+/***************************** Dark theme styles ********************************/
+.dark-theme {
+  color: #f8f8f8;
+  background-color: gray;
+}
+
+.dark-theme #message-area {
+  color: #f8f8f8;
+  background-color: black;
+}
+
+.dark-theme p {
+  color: #f8f8f8;
+}
+
+.dark-theme select {
+  color: #727272;
+}
+
+.dark-theme #message-area .container-fluid:nth-child(2n+1) {
+  background-color: rgba(255, 255, 255, .05);
+}
+
+/***************************** Modal Override for theme styles ********************************/
+#themeModal {
+  color: #727272;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+}
+
+#themeModal p{
+  color: #727272;
+}
+
+#themeModal select {
+  color: #727272;
+}
+
+#themeModal button {
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+#themeModal .close {
+  font-size: 2em;
+  width: 10%;
 }

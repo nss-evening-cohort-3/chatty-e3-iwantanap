@@ -1,4 +1,5 @@
 var chattyBody = document.querySelector("body");
+// var bodyMinusModal = document.getElementById("bodyMinusModal")
 
 // NAV: If there are no messages, then the clear messages button should be disabled (see example above).
 
@@ -26,8 +27,9 @@ chattyBody.addEventListener("click", function(e) {
     Chatty.deleteSingleMessage(thisMessage);
   }
 
+  // Accessibility Themes
   if (event.target.id === "dark-theme" && event.target.checked === true) {
-    chattyBody.classList.add("theme4");
+    chattyBody.classList.add("dark-theme");
   }
 
   if (event.target.id === "dark-theme" && event.target.checked === false) {
@@ -40,6 +42,31 @@ chattyBody.addEventListener("click", function(e) {
 
   if (event.target.id === "large-text" && event.target.checked === false) {
     document.getElementById("message-area").classList.remove("larger-text");
+  }
+
+  // Fun Themes
+  if (event.target.id === "theme1" && event.target.checked === true) {
+    chattyBody.classList.remove("theme2", "theme3", "theme4")
+    chattyBody.classList.add("theme1");
+  }
+
+  if (event.target.id === "theme2" && event.target.checked === true) {
+    chattyBody.classList.remove("theme1", "theme3", "theme4")
+    chattyBody.classList.add("theme2");
+  }
+
+  if (event.target.id === "theme3" && event.target.checked === true) {
+    chattyBody.classList.remove("theme1", "theme2", "theme4")
+    chattyBody.classList.add("theme3");
+  }
+
+  if (event.target.id === "theme4" && event.target.checked === true) {
+    chattyBody.classList.remove("theme1", "theme2", "theme3")
+    chattyBody.classList.add("theme4");
+  }
+
+  if (event.target.id === "themeNone" && event.target.checked === true) {
+    chattyBody.classList.remove("theme1", "theme2", "theme3", "theme4")
   }
 
 });
