@@ -26,6 +26,7 @@ var Chatty = (function(oldChatty) {
     } else {
       textAI = ai.random[Math.floor(Math.random()* ai.random.length)];
     }
+    textAI.timestamp = new Date();
     Chatty.addMessages(textAI);
     Chatty.onToDom();
   }
