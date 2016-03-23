@@ -22,6 +22,9 @@ var Chatty = (function(oldChatty) {
         var selectedUser = document.getElementById("user-dropdown").value;
         if (selectedUser === "defaultVal") {
             alert("Select a user, bozo.")
+        } else if (selectedUser === "addUser"){ 
+            selectedUser = "Idiot";
+            return selectedUser;
         } else {
             return selectedUser;
         }

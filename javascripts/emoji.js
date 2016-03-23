@@ -4,9 +4,9 @@ var Chatty = ( (oldChatty) => {
 
 // The current emoji list
   let emojiList = {
-      "[happy]": '<img src="../emoji/happy.png">',
-      "[sleepy]": '<img src="../emoji/sleepy.png">',
-      "[poopy]": '<img src="../emoji/poopy.png">'
+      "[happy]": '<img src="emoji/happy.png">',
+      "[sleepy]": '<img src="emoji/sleepy.png">',
+      "[poopy]": '<img src="emoji/poopy.png">'
   };
 
 // Adds Emoji to any newly commited message

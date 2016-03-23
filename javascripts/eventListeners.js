@@ -7,16 +7,23 @@ var chattyBody = document.querySelector("body");
 chattyBody.addEventListener("keypress", function(e) {
   // NAV: When return key is detected, you'll create a new message.
   if (event.target.id === "message-input" && event.code === "Enter") {
-    Chatty.createNewMessage();
-    setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))
-    document.getElementById("message-input").value = ""
+    var selectedUser = document.getElementById("user-dropdown").value;
+      if (selectedUser === "defaultVal") {
+            alert("Select a user, bozo.")
+      } else {
+      Chatty.createNewMessage();
+      setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))
+      document.getElementById("message-input").value = ""
+    }
   }
 });
+
 
 chattyBody.addEventListener("click", function(e) {
   // NAV: When the user clicks the clear messages button, all current chat messages should be removed from the application.
   if (event.target.id === "clear-board") {
-    for (var i = Chatty.getMessages().length - 1; i > (Chatty.getMessages().length - 21) && i > -1; i--) {
+    var boardLeftovers = Chatty.getMessages().length - 21;
+    for (var i = Chatty.getMessages().length - 1; i > boardLeftovers && i > -1; i--) {
       Chatty.deleteMessage(i);
       Chatty.onToDom();
     }
@@ -74,6 +81,10 @@ chattyBody.addEventListener("click", function(e) {
 chattyBody.addEventListener("change", function(e){
   if (event.target.tagName === "SELECT" && event.target.value === "addUser") {
     var newUser = prompt("Name of new user");
-    Chatty.addUsers(newUser);
+    if (newUser !== "") {
+      Chatty.addUsers(newUser);
+    } else {
+      newUser = prompt("Name of new user");
+    }
   }
 });
