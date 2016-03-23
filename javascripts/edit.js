@@ -6,6 +6,7 @@ var Chatty = (function(oldChatty) {
         editMode = true;
         var messageToEditText = thisMessage.getElementsByTagName("p")[1];
         var messageValue = messageToEditText.innerHTML
+        messageValue = messageValue.replace(/<p.*<\/p>/g, "");
         messageToEditText.innerHTML = `<input type="text" id="editMode">`;
         var editMode = document.getElementById("editMode")
         editMode.value = messageValue;
