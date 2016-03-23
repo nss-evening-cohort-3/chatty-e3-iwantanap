@@ -85,14 +85,15 @@ body {
 /*Overrides Logo Assets*/
 .theme1 .nav-font {
   font-family: 'Bonbon', cursive;
-  font-size: 3em;
+  font-size: 45px;
+  margin: 2px;
 }
 
 /*Overrides Timestamp Styling*/
 .theme1 .time-stamp{
   font-family: 'Indie Flower', cursive;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 25px;
 }
 
 /*Overrides User Styling*/
@@ -110,7 +111,7 @@ body {
 
 .theme1 .editThisMessage,
 .theme1 .deleteThisMessage {
-  font-size: 1.1em;
+  font-size: 20px;
 }
 
 .theme1 button:hover,
@@ -137,7 +138,7 @@ body {
   background: url(img/theme2space.jpg) black center center fixed;
   color: white;
   font-family: 'Michroma', sans-serif;
-  font-size: .9em;
+  font-size: 12px;
 }
 
 /*Main Theme Assets*/
@@ -149,21 +150,21 @@ body {
 /*Overrides Logo Assets*/
 .theme2 .nav-font {
   font-family: 'Michroma', sans-serif;
-  font-size: 3em;
+  font-size: 25px;
 }
 
 /*Overrides Timestamp Styling*/
 .theme2 .time-stamp{
   font-family: 'Michroma', sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 14px;
 }
 
 /*Overrides User Styling*/
 .theme2 .time-stamp .bold {
   font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
   color: #CD5615;
-  font-size: 1.5em;
+  font-size: 18px;
 }
 
 /*Overrides Button Styling*/
@@ -175,7 +176,7 @@ body {
 
 .theme2 .editThisMessage,
 .theme2 .deleteThisMessage {
-  font-size: 1.1em;
+  font-size: 10px;
 }
 
 .theme2 button:hover,
@@ -202,7 +203,7 @@ body {
   background-color: #272b30;
   color: #c8c8c8;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 14px;
 }
 
 /*Main Theme Assets*/
@@ -214,14 +215,14 @@ body {
 /*Overrides Logo Assets*/
 .theme3 .nav-font {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 3em;
+  font-size: 45px;
 }
 
 /*Overrides Timestamp Styling*/
 .theme3 .time-stamp{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 20px;
 }
 
 /*Overrides User Styling*/
@@ -239,7 +240,7 @@ body {
 
 .theme3 .editThisMessage,
 .theme3 .deleteThisMessage {
-  font-size: 1.1em;
+  font-size: 14px;
 }
 
 .theme3 button:hover,
@@ -266,7 +267,7 @@ body {
   background-color: #272b30;
   color: #c8c8c8;
   font-family: 'Candal', sans-serif;
-  font-size: 1.2em;
+  font-size: 12px;
 }
 
 /*Main Theme Assets*/
@@ -310,7 +311,7 @@ body {
 .theme4 .time-stamp{
   font-family: 'Candal', sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 14px;
 }
 
 /*Overrides User Styling*/
@@ -328,7 +329,7 @@ body {
 
 .theme4 .editThisMessage,
 .theme4 .deleteThisMessage {
-  font-size: 1.1em;
+  font-size: 14px;
 }
 
 .theme4 button:hover,
