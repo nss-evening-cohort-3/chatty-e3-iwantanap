@@ -10,6 +10,7 @@ var Chatty = (function(oldChatty) {
         var messageValue = messageToEditText.innerHTML
         messageValue = messageValue.replace(/<p.*<\/p>/g, "");
         messageValue = Chatty.removeEmoji(messageValue);
+        messageValue = Chatty.revertCurse(messageValue, messageId);
         messageToEditText.innerHTML = `<input type="text" id="editMode">`;
         var editMode = document.getElementById("editMode")
         editMode.value = messageValue;

@@ -17,7 +17,7 @@ var Chatty = (function(oldChatty) {
       for (var j in tempVar) {
         for (var k in curses) {
           if (tempVar[j].toLowerCase() === curses[k]) {
-            tempVar[j] = `<span class="curse">${curses[k].toUpperCase()}</span>`
+            tempVar[j] = `<span class='curse'>${curses[k].toUpperCase()}</span>`
             tempVar[j]
           }
         }
@@ -27,6 +27,23 @@ var Chatty = (function(oldChatty) {
     Chatty.replaceMessages(messageChecker)
   }
 
+  oldChatty.revertCurse = function(msgText, msgID) {
+    msgID = document.getElementById(msgID)
+    let span = msgID.getElementsByTagName('span')
+    var newMessages = []
+    let tempVar = msgText.split(" ")
+    let j = 1
+    for (var i in tempVar) {
+      if (tempVar[i] === "<span") {
+        tempVar.splice(i,1)
+      }
+      if (tempVar[i].indexOf("</span>") > -1) {
+        tempVar[i] = span[j].innerHTML
+        j++
+      }
+    }
+    return tempVar.join(" ")
+  }
 
   return Chatty
 }(Chatty));
