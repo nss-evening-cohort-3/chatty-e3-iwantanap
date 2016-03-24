@@ -51,6 +51,7 @@ var Chatty = (() => {
           break;  
         };
       };
-    }
+    },
+    replaceMessages: (newArray) => {messages = newArray}
   };
 })();
