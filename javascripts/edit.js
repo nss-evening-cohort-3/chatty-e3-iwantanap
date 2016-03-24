@@ -2,11 +2,9 @@
 
 var Chatty = ((oldChatty) => {
 
-    //Edit mode func (ChattyAugmentation) first disables edit mode button for all messages to prevent bug where first-selected message text is applied to all messages in editMode 
-    //Gathers id, message content
     oldChatty.editModeFunc = (thisMessage) => {
-        Chatty.disableEditMode();
-        let messageId = thisMessage.id;  //gathers message ID
+        Chatty.disableEditMode(); //first disables edit mode button for all messages to prevent bug where first-selected message text is applied to all messages in editMode 
+        let messageId = thisMessage.id; 
         let messageToEditText = thisMessage.getElementsByTagName("p")[1]; //gathers message content
         let messageValue = messageToEditText.innerHTML;  //gathers message content
         messageValue = messageValue.replace(/<p.*<\/p>/g, "");  //removes "edited tag" from any messages previously edited when user puts a message into edit mode multiple times

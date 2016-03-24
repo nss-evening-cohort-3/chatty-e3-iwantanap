@@ -7,7 +7,7 @@ var Chatty = ((oldChatty) => {
         names: ["Xavier", "Joanna", "Mackenzie", "Gunter", "Iveta", "Sven"]
     };
 
-    // Gets new user info from eventListeners.js and pushes it to an array which then gets reloaded into the array
+    // Gets new user info from eventListeners.js and pushes it to an array which then gets reloaded into the select element on dom
     oldChatty.addUsers = (newUser) => { 
         users.names.push(newUser);
         Chatty.addUsersToDom();
@@ -16,7 +16,7 @@ var Chatty = ((oldChatty) => {
     // Cycles through private array of users and appends them to the select user menu each time the array is edited
     oldChatty.addUsersToDom = () => {
         let userArray = users.names;
-        let buildUserDropDown = ""
+        let buildUserDropDown = "";
         for (let i = 0; i < userArray.length; i++) {
             buildUserDropDown += `<option value=${userArray[i].toLowerCase()}>${userArray[i]}</option>`
         }
@@ -30,7 +30,7 @@ var Chatty = ((oldChatty) => {
         if (selectedUser === "defaultVal") {
             alert("Select a user, bozo.")
         } else if (selectedUser === "addUser"){ 
-            selectedUser = "Idiot";
+            selectedUser = "Idiot"; //If user somehow gets through both prompts without adding their name, they are assigned appropriate name value
             return selectedUser;
         } else {
             return selectedUser;
