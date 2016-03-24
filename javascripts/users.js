@@ -1,25 +1,32 @@
-var Chatty = (function(oldChatty) {
+"use strict"
 
+let Chatty = (oldChatty) => {
+
+    // Creates private user array that can be added with augmented method. var instead of let because it will be used throughout this augmentation
     var users = {
         names: ["Xavier", "Joanna", "Mackenzie", "Gunter", "Iveta", "Sven"]
     };
 
-    oldChatty.addUsers = function(newUser) {
+    // Gets new user info from eventListeners.js and pushes it to an array which then gets reloaded into the array
+    oldChatty.addUsers = (newUser) => {
         users.names.push(newUser);
         Chatty.addUsersToDom();
     };
 
-    oldChatty.addUsersToDom = function() {
-        var userArray = users.names;
-        var buildUserDropDown = ""
-        for (var i = 0; i < userArray.length; i++) {
+    // Cycles through private array of users and appends them to the select user menu each time the array is edited
+    oldChatty.addUsersToDom = () => {
+        let userArray = users.names;
+        let buildUserDropDown = ""
+        for (let i = 0; i < userArray.length; i++) {
             buildUserDropDown += `<option value=${userArray[i].toLowerCase()}>${userArray[i]}</option>`
         }
         document.getElementById("user-dropdown").innerHTML = `<option value="defaultVal">Select User</option>` + buildUserDropDown + `<option value="addUser">+Add User</option>`;
     };
 
-    oldChatty.selectUsers = function(userValue) {
-        var selectedUser = document.getElementById("user-dropdown").value;
+
+    // Selects users at time of message being entered and returns the value
+    oldChatty.selectUsers  = () => { 
+        let selectedUser = document.getElementById("user-dropdown").value; 
         if (selectedUser === "defaultVal") {
             alert("Select a user, bozo.")
         } else if (selectedUser === "addUser"){ 
@@ -30,8 +37,6 @@ var Chatty = (function(oldChatty) {
         }
     }
 
-    
-
 
     return oldChatty
-}(Chatty));
+})(Chatty);
