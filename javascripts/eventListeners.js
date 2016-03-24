@@ -1,95 +1,112 @@
-var chattyBody = document.querySelector("body");
-// var bodyMinusModal = document.getElementById("bodyMinusModal")
+"use strict"
 
-// NAV: If there are no messages, then the clear messages button should be disabled (see example above).
+// Listen for the event on the <body> element, and then inspect what the target of the event is
+let chattyBody = document.querySelector("body");
 
 
-chattyBody.addEventListener("keypress", function(e) {
-  // NAV: When return key is detected, you'll create a new message.
+
+// ******************************** ALL KEYPRESS EVENTS ********************************>
+// NAV: When return key is detected, you'll create a new message.
+chattyBody.addEventListener("keypress", (e) => {
   if (event.target.id === "message-input" && event.code === "Enter") {
-    var selectedUser = document.getElementById("user-dropdown").value;
-      if (selectedUser === "defaultVal") {
+    let selectedUser = document.getElementById("user-dropdown").value;  //grabs user who is "posting" 
+      if (selectedUser === "defaultVal") {  //checks to make sure a user is selected. does not default to a specific value for UX, don't want to accidentally have all messages posted from first item in the array
             alert("Select a user, bozo.")
       } else {
-      Chatty.createNewMessage();
-      setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))
-      document.getElementById("message-input").value = ""
+        Chatty.createNewMessage();  //creates a new message object by sending it a function that builds the object, another function that pushes it to the array and then another function that outputs it to dom
+        setTimeout(Chatty.chooseAI, Math.floor(Math.random()* 5000))  //creates unique and random response time for AI to respond to user's message entry
+        document.getElementById("message-input").value = ""  //resets the main input field
     }
   }
 });
 
 
-chattyBody.addEventListener("click", function(e) {
+
+// ********************************* ALL CLICK EVENTS *********************************>
+// MESSAGE BOARD: Clears most recent 20 messages in message board
+chattyBody.addEventListener("click", (e) => {
   // NAV: When the user clicks the clear messages button, all current chat messages should be removed from the application.
   if (event.target.id === "clear-board") {
-    var boardLeftovers = Chatty.getMessages().length - 21;
-    for (var i = Chatty.getMessages().length - 1; i > boardLeftovers && i > -1; i--) {
-      Chatty.deleteMessage(i);
-      Chatty.onToDom();
+    let boardLeftovers = Chatty.getMessages().length - 21;  //sets up a variable that will access all but the last 20 messages
+    for (let i = Chatty.getMessages().length - 1; i > boardLeftovers && i > -1; i--) {  //cycles (backward) through the array and selects the 20 most recent items
+      Chatty.deleteMessage(i);  //deletes each of the 20 last messages on the board from the private messages array (see chatty.js for further info)
+      Chatty.onToDom();  //cycles through current array (any remaining messages beyond 20) and the next >= 20 messages and outputs them to DOM (see chatty.js for further info)
     }
   }
 
-  if (event.target.className.includes("deleteThisMessage") === true) {
-    thisMessage = e.target.parentElement.parentElement.parentElement.id;
-    Chatty.deleteSingleMessage(thisMessage);
+  // INDIVIDAL MESSAGE: When the user clicks the delete messages beside a message, that message is removed from private array
+  if (event.target.className.includes("deleteThisMessage") === true) {  //each delete button has a class of deleteThisMessage. this detects to see if clicked item contains that class
+    let thisMessage = e.target.parentElement.parentElement.parentElement.id;  //selects clicked button, goes to it's parent (bootstrap button group), then goes up one more parent level to access full message and grab it's unique id
+    Chatty.deleteSingleMessage(thisMessage);  //sends message ID into delete message that removes it from the array before it cycles through and outputs items to DOM again (see chatty.js for further info)
   }
 
-  if (event.target.className.includes("editThisMessage") === true) {
-    thisMessage = e.target.parentElement.parentElement.parentElement;
-    Chatty.editModeFunc(thisMessage);
+  // INDIVIDAL MESSAGE: When the user clicks the delete messages beside a message, that message is removed from private array
+  if (event.target.className.includes("editThisMessage") === true) {  //each select button has a class of editThisMessage. this detects to see if clicked item contains that class
+    let thisMessage = e.target.parentElement.parentElement.parentElement;  //selects clicked button, goes to it's parent (bootstrap button group), then goes up one more parent level to access full message
+    Chatty.editModeFunc(thisMessage);  //sends full message to editMode (see edit.js for further info)
   }
 
-  // Accessibility Themes
-  if (event.target.id === "dark-theme" && event.target.checked === true) {
-    chattyBody.classList.add("dark-theme");
+  // ACCESSIBILITY FEATURE: Turns background gray and color white by adding a CSS class
+  if (event.target.id === "dark-theme" && event.target.checked === true) {  //modal: the dark-theme checkbox has an ID of "dark-theme". if value is checked, it returns true and procedes to classList.add function
+    chattyBody.classList.add("dark-theme");  //applies dark theme (regardless of any other themes applied)
   }
 
-  if (event.target.id === "dark-theme" && event.target.checked === false) {
-    chattyBody.classList.remove("dark-theme");
+  // ACCESSIBILITY FEATURE: Removes background gray and color white by removing a CSS class
+  if (event.target.id === "dark-theme" && event.target.checked === false) {  //modal: the dark-theme checkbox has an ID of "dark-theme". if value is unchecked by user, it returns false and procedes to classList.remove function
+    chattyBody.classList.remove("dark-theme");  //removes dark theme (even if it doesn't already have the class)
   }
 
-  if (event.target.id === "large-text" && event.target.checked === true) {
-    document.getElementById("message-area").classList.add("larger-text");
+  // ACCESSIBILITY FEATURE: Enlarges all text within the message area by adding a specific class to the container
+  if (event.target.id === "large-text" && event.target.checked === true) {  //modal: the large-text checkbox has an ID of "large-text". if value is checked, it returns true and procedes to classList.add function
+    document.getElementById("message-area").classList.add("larger-text");  //applies large text (regardless of any other themes applied)
   }
 
-  if (event.target.id === "large-text" && event.target.checked === false) {
-    document.getElementById("message-area").classList.remove("larger-text");
+  // ACCESSIBILITY FEATURE: Turns background gray and color white by adding a CSS class
+  if (event.target.id === "large-text" && event.target.checked === false) {  //the large-text checkbox has an ID of "large-text". if value is unchecked, it returns false and procedes to classList.add function
+    document.getElementById("message-area").classList.remove("larger-text");  //removes large text (even if it doesn't already have the class)
   }
 
-  // Fun Themes
-  if (event.target.id === "theme1" && event.target.checked === true) {
-    chattyBody.classList.remove("theme2", "theme3", "theme4")
-    chattyBody.classList.add("theme1");
+
+  // FUN THEMES: User is able to select from 4 themes via model 
+  if (event.target.id === "theme1" && event.target.checked === true) {  //checks to see if user clicked on first theme
+    chattyBody.classList.remove("theme2", "theme3", "theme4");  //removes all the old themes so only new one is applied
+    chattyBody.classList.add("theme1");  //adds user's selected theme to the body
   }
 
-  if (event.target.id === "theme2" && event.target.checked === true) {
-    chattyBody.classList.remove("theme1", "theme3", "theme4")
-    chattyBody.classList.add("theme2");
+  if (event.target.id === "theme2" && event.target.checked === true) {  //checks to see if user clicked on second theme
+    chattyBody.classList.remove("theme1", "theme3", "theme4")  //removes all the old themes so only new one is applied
+    chattyBody.classList.add("theme2");  //adds user's selected theme to the body
   }
 
-  if (event.target.id === "theme3" && event.target.checked === true) {
-    chattyBody.classList.remove("theme1", "theme2", "theme4")
-    chattyBody.classList.add("theme3");
+  if (event.target.id === "theme3" && event.target.checked === true) {  //checks to see if user clicked on third theme
+    chattyBody.classList.remove("theme1", "theme2", "theme4");  //removes all the old themes so only new one is applied
+    chattyBody.classList.add("theme3");  //adds user's selected theme to the body
   }
 
-  if (event.target.id === "theme4" && event.target.checked === true) {
-    chattyBody.classList.remove("theme1", "theme2", "theme3")
-    chattyBody.classList.add("theme4");
+  if (event.target.id === "theme4" && event.target.checked === true) {  //checks to see if user clicked on fourth theme
+    chattyBody.classList.remove("theme1", "theme2", "theme3");  //removes all the old themes so only new one is applied
+    chattyBody.classList.add("theme4");  //adds user's selected theme to the body
   }
 
-  if (event.target.id === "themeNone" && event.target.checked === true) {
-    chattyBody.classList.remove("theme1", "theme2", "theme3", "theme4")
+
+  // NOT FUN THEMES: User is able to reset their theme to basic moqup styling
+  if (event.target.id === "themeNone" && event.target.checked === true) {  //checks to see if user clicked on themeNone
+    chattyBody.classList.remove("theme1", "theme2", "theme3", "theme4")  //removes all the old themes
   }
 
 });
 
-chattyBody.addEventListener("change", function(e){
-  if (event.target.tagName === "SELECT" && event.target.value === "addUser") {
-    var newUser = prompt("Name of new user");
-    if (newUser !== "") {
-      Chatty.addUsers(newUser);
+
+
+// ********************************* ALL CHANGE EVENTS *********************************>
+// USER OPTIONS MENU: Applies user to each message, allows system admin to add users to private array before they are output to DOM
+chattyBody.addEventListener("change", (e) => {
+  if (event.target.tagName === "SELECT" && event.target.value === "addUser") {  //checks to ensure the click event is for both the dropdown menu and that the "addUser" value is selected
+    let newUser = prompt("Name of new user");  //creates a new variable with the string output by user's input into the prompt
+    if (newUser !== "") {  //checks to make sure user didn't simply hit "okay" on prompt box - resulting in an empty string
+      Chatty.addUsers(newUser); //sends user's prompt input as a string into users array (see chatty.js for further info)
     } else {
-      newUser = prompt("Name of new user");
+      newUser = prompt("Name of new user"); //prompts user again in case they exited the user prompt accidentally with a blank string for a value
     }
   }
 });
