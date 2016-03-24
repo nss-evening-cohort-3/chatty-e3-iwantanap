@@ -408,3 +408,16 @@ body {
 #themeModal h3 {
   margin: 7px;
 }
+
+
+
+/***************************** Edited Tag CSS ********************************/
+
+.editedTag {
+  display: block;
+  font-size: 10px;
+}
+
+#editMode {
+  width: 100%;
+}

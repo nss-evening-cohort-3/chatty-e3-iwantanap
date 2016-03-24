@@ -8,6 +8,7 @@ var id = 5;
         newMessage.timestamp = new Date();
         newMessage.user = Chatty.selectUsers();
         newMessage.id = id;
+        newMessage.editted = "";
         if (newMessage.user !== undefined) {
             newMessage.user = newMessage.user.charAt(0).toUpperCase() + newMessage.user.slice(1);
             id++

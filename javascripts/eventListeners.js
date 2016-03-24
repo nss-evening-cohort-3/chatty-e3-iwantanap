@@ -34,6 +34,11 @@ chattyBody.addEventListener("click", function(e) {
     Chatty.deleteSingleMessage(thisMessage);
   }
 
+  if (event.target.className.includes("editThisMessage") === true) {
+    thisMessage = e.target.parentElement.parentElement.parentElement;
+    Chatty.editMode(thisMessage);
+  }
+
   // Accessibility Themes
   if (event.target.id === "dark-theme" && event.target.checked === true) {
     chattyBody.classList.add("dark-theme");
