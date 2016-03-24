@@ -32,16 +32,24 @@
 ### Final Result:
 > Enter Results Here
 
-##### Description: 
-![Screenshot](https://raw.githubusercontent.com/morecallan/HTML-exercise-banking-form/master/screenshots/Banking-Form.png)
-##### Description: 
-![Screenshot](https://raw.githubusercontent.com/morecallan/HTML-exercise-banking-form/master/screenshots/Banking-Form.png)
-##### Description: 
-![Screenshot](https://raw.githubusercontent.com/morecallan/HTML-exercise-banking-form/master/screenshots/Banking-Form.png)
-##### Description: 
-![Screenshot](https://raw.githubusercontent.com/morecallan/HTML-exercise-banking-form/master/screenshots/Banking-Form.png)
-##### Description: 
-![Screenshot](https://raw.githubusercontent.com/morecallan/HTML-exercise-banking-form/master/screenshots/Banking-Form.png)
+##### Description: Base Messages Loaded on Pageload
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/1.baseMessages.jpg" width="600">
+##### Description: Select User Menu
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/2.selectUsers.jpg" width="600">
+##### Description: User Inputs New Message
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/3.userMessage.jpg" width="600">
+##### Description: Theme Selection
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/5.themeSelection.jpg" width="600">
+##### Description: Theme Applied 
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/6.themeApplied.jpg" width="600">
+##### Description: Emoji Usage
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/7.emoji.jpg" width="600">
+##### Description: Clear Entire Message Board
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/8.clearMessageBoard.jpg" width="600">
+##### Description: Edit Mode
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/9.editMode.jpg" width="600">
+##### Description: Edited Text
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/10.editTextStamp.jpg" width="600">
 
 ### How to run:
 ```
