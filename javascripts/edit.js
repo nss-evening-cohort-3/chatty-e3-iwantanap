@@ -1,24 +1,23 @@
-var Chatty = (function(oldChatty) {
+"use strict"
 
-    var editMode = false;
+var Chatty = ((oldChatty) => {
 
-    oldChatty.editMode = function(thisMessage) {
-        editMode = true;
-        var messageId = thisMessage.id;
+    oldChatty.editModeFunc = (thisMessage) => {
+        let messageId = thisMessage.id;
         Chatty.disableEditMode();
-        var messageToEditText = thisMessage.getElementsByTagName("p")[1];
-        var messageValue = messageToEditText.innerHTML
+        let messageToEditText = thisMessage.getElementsByTagName("p")[1];
+        let messageValue = messageToEditText.innerHTML
         messageValue = messageValue.replace(/<p.*<\/p>/g, "");
         messageValue = Chatty.removeEmoji(messageValue);
         messageToEditText.innerHTML = `<input type="text" id="editMode">`;
-        var editMode = document.getElementById("editMode")
+        let editMode = document.getElementById("editMode")
         editMode.value = messageValue;
-        editMode.addEventListener("keypress", function(){
+        editMode.addEventListener("keypress", (e) => {
             if (event.code === "Enter") {
-                var edittedText = editMode.value;
+                let edittedText = editMode.value;
                 edittedText = Chatty.addEmoji(edittedText);
-                var editTimestamp = new Date();
-                var edittedAt = `<p class="editedTag"> edited at ${editTimestamp}</p>`;
+                let editTimestamp = new Date();
+                let edittedAt = `<p class="editedTag"> edited at ${editTimestamp}</p>`;
                 messageToEditText.innerHTML = edittedText 
                 Chatty.editMessage(messageId, edittedText, edittedAt);
                 Chatty.onToDom()
@@ -26,7 +25,7 @@ var Chatty = (function(oldChatty) {
         });
     }
 
-    oldChatty.disableEditMode = function() {
+    oldChatty.disableEditMode = () => {
         
         let editButton = document.getElementsByClassName("editThisMessage");
         for (let i = 0; i < editButton.length; i++) {
@@ -35,4 +34,4 @@ var Chatty = (function(oldChatty) {
     }
 
     return oldChatty
-}(Chatty));
+})(Chatty);
