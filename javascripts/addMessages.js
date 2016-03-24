@@ -1,11 +1,12 @@
+"use strict"
 var Chatty = (function(oldChatty) {
 
 
     oldChatty.onToDom = function() {
         Chatty.checkCurse()
-        var messageArray = Chatty.getMessages();
-        var buildString = "";
-        for (var i = messageArray.length - 1; i > (messageArray.length - 21) && i > -1; i--) {
+        let messageArray = Chatty.getMessages();
+        let buildString = "";
+        for (let i = messageArray.length - 1; i > (messageArray.length - 21) && i > -1; i--) {
             buildString += `<div class="container-fluid" id="${messageArray[i].id}"><div class="col-md-12"> <span class="time-stamp inline"> ${messageArray[i].timestamp} - By <p class="bold">${messageArray[i].user}</p> </span><div class="btn-group btn-group-sm" role="group"><button class="btn btn-default navbar-btn editThisMessage">Edit</button><button class="btn btn-default navbar-btn deleteThisMessage">Delete</button></div><p class="message-text"> ${messageArray[i].message} ${messageArray[i].editted}</p></div></div>`  
         }
         buildString = Chatty.addEmoji(buildString);
