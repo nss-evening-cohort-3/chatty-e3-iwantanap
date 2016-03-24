@@ -3,6 +3,7 @@ var Chatty = (function(oldChatty) {
 
 
     oldChatty.onToDom = function() {
+        Chatty.checkCurse()
         let messageArray = Chatty.getMessages();
         let buildString = "";
         for (let i = messageArray.length - 1; i > (messageArray.length - 21) && i > -1; i--) {

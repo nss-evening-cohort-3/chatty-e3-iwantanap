@@ -422,3 +422,34 @@ body {
 #editMode {
   width: 100%;
 }
+
+/***************************** CURSING! ********************************/
+
+.curse {
+  font-weight: bold;
+  font-size: 6vw;
+  animation-name: color_change;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@-webkit-keyframes color_change {
+  from { color: yellow; }
+  to { color: red; }
+}
+@-moz-keyframes color_change {
+  from { color: yellow; }
+  to { color: red; }
+}
+@-ms-keyframes color_change {
+  from { color: yellow; }
+  to { color: red; }
+}
+@-o-keyframes color_change {
+  from { color: yellow; }
+  to { color: red; }
+}
+@keyframes color_change {
+  from { color: yellow; }
+  to { color: red; }
+}

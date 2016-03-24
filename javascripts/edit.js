@@ -9,6 +9,7 @@ var Chatty = ((oldChatty) => {
         let messageValue = messageToEditText.innerHTML;  //gathers message content
         messageValue = messageValue.replace(/<p.*<\/p>/g, "");  //removes "edited tag" from any messages previously edited when user puts a message into edit mode multiple times
         messageValue = Chatty.removeEmoji(messageValue); //puts any images into regular [] form for edit purposes
+        messageValue = Chatty.revertCurse(messageValue, messageId); 
         messageToEditText.innerHTML = `<input type="text" id="editMode">`; //inserts text input mode where message text was displayed
         let editMode = document.getElementById("editMode"); //selects element in editMode
         editMode.value = messageValue; //inserts current message text as default value for text input
