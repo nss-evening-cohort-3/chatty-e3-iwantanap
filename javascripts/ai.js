@@ -1,7 +1,7 @@
 "use strict"
 var Chatty = (function(oldChatty) {
-  var ai = [];
-  var aiXML = new XMLHttpRequest();
+  let ai = [];
+  let aiXML = new XMLHttpRequest();
   aiXML.addEventListener("load", function(){
     ai = JSON.parse(this.responseText);
   });
@@ -10,7 +10,7 @@ var Chatty = (function(oldChatty) {
 
   oldChatty.chooseAI = function() {
     let textAI = {};
-    var msgString = Chatty.getMessages()[Chatty.getMessages().length-1].message;
+    let msgString = Chatty.getMessages()[Chatty.getMessages().length-1].message;
     if (msgString === "") {
       textAI = ai.empty[Math.floor(Math.random()* ai.empty.length)];
     } else if (msgString.indexOf("?") >= 0) {
