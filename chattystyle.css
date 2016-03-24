@@ -71,14 +71,15 @@ body {
 /***************************** SETS STYLE FOR THEME 1 (Lisa Frank) ********************************/
 /*Main Theme Assets*/
 .theme1 {
-  background-color: #3CB4B9;
+  background: url(img/theme1lisa.jpg) black center center fixed;
+  background-size: cover;
   color: white;
   font-family: 'Indie Flower', cursive;
 }
 
 /*Main Theme Assets*/
 .theme1 #message-area {
-  background-color: #F0D5F7;
+  background-color: rgba(240, 213, 247, .9);
   color: #3CB4B9;
 }
 
