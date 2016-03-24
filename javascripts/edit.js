@@ -5,6 +5,7 @@ var Chatty = (function(oldChatty) {
     oldChatty.editMode = function(thisMessage) {
         editMode = true;
         var messageId = thisMessage.id;
+        Chatty.disableEditMode();
         var messageToEditText = thisMessage.getElementsByTagName("p")[1];
         var messageValue = messageToEditText.innerHTML
         messageValue = messageValue.replace(/<p.*<\/p>/g, "");
@@ -23,9 +24,15 @@ var Chatty = (function(oldChatty) {
                 Chatty.onToDom()
             }
         });
-
     }
 
+    oldChatty.disableEditMode = function() {
+        
+        let editButton = document.getElementsByClassName("editThisMessage");
+        for (let i = 0; i < editButton.length; i++) {
+            editButton[i].disabled = true;
+        };
+    }
 
     return oldChatty
 }(Chatty));
