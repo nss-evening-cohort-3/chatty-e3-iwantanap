@@ -25,6 +25,7 @@ var Chatty = (function() {
             //Step 6: Create callback for once the messages page loads
             function messagesSuccess() {
                 messages = JSON.parse(this.responseText).messages;
+                Chatty.checkCurse();
                 callbackFunc();
             };
         },
@@ -50,6 +51,9 @@ var Chatty = (function() {
                    break;  
                 }
             }
+        },
+        replaceMessages: function(newArray) {
+            messages = newArray
         }
     }
 }());
