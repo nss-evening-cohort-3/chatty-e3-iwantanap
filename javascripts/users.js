@@ -1,6 +1,6 @@
 "use strict"
 
-let Chatty = (oldChatty) => {
+var Chatty = ((oldChatty) => {
 
     // Creates private user array that can be added with augmented method. var instead of let because it will be used throughout this augmentation
     var users = {
@@ -8,7 +8,7 @@ let Chatty = (oldChatty) => {
     };
 
     // Gets new user info from eventListeners.js and pushes it to an array which then gets reloaded into the array
-    oldChatty.addUsers = (newUser) => {
+    oldChatty.addUsers = (newUser) => { 
         users.names.push(newUser);
         Chatty.addUsersToDom();
     };
