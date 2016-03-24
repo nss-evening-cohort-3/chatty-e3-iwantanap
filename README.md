@@ -30,7 +30,8 @@
 > 4. JavaScript: IIFE and augmentation, XHR, JSON, Event Listeners, DOM Manipulation
 
 ### Final Result:
-> Enter Results Here
+> "Chat Room" where users are able to send messages from their specific username, edit their messages, receive replies from an AI and customize their themes.  
+> PS. Try entering swear word just for fun.
 
 ##### Description: Base Messages Loaded on Pageload
 <img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/1.baseMessages.jpg" width="600">
@@ -38,6 +39,8 @@
 <img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/2.selectUsers.jpg" width="600">
 ##### Description: User Inputs New Message
 <img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/3.userMessage.jpg" width="600">
+##### Description: AI Response
+<img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/4.AIResponse.jpg" width="600">
 ##### Description: Theme Selection
 <img src="https://raw.githubusercontent.com/nss-evening-cohort-3/chatty-e3-iwantanap/master/screenshots/5.themeSelection.jpg" width="600">
 ##### Description: Theme Applied 
