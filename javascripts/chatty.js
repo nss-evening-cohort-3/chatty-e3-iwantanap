@@ -40,6 +40,16 @@ var Chatty = (function() {
         getMessages: function() {
             // It should also expose a public getter to read the messages 
             return messages;
+        },
+
+        editMessage: function(idOfText, messageText, editedId) {
+            for (var i = 0; i < messages.length; i++) {
+                if (messages[i].id == idOfText) {
+                   messages[i].message = messageText;
+                   messages[i].editted = editedId;
+                   break;  
+                }
+            }
         }
     }
 }());
