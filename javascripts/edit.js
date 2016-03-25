@@ -18,7 +18,13 @@ var Chatty = ((oldChatty) => {
                 let edittedText = editMode.value; //grabs input value and stores it in a new var
                 edittedText = Chatty.addEmoji(edittedText); //transforms and [] elements back into emojis
                 let editTimestamp = new Date(); //creates timestamp for edited time
-                let edittedAt = `<p class="editedTag"> edited at ${editTimestamp}</p>`; //adds element that lets users know the last time the message was edited
+                let editingUser = document.getElementById("user-dropdown").value; //grabs user value at time of edit
+                if (editingUser === "addUser" || editingUser === "defaultVal") {
+                    editingUser = "Idiot"
+                } else if (editingUser) {
+                    editingUser = editingUser.charAt(0).toUpperCase() + editingUser.slice(1);
+                }
+                let edittedAt = `<p class="editedTag"> edited at ${editTimestamp} by ${editingUser}</p>`; //adds element that lets users know the last time the message was edited
                 messageToEditText.innerHTML = edittedText //replaces message content area with new updated message
                 Chatty.editMessage(messageId, edittedText, edittedAt); //updates private message array
                 Chatty.onToDom() //updates DOM with new array, also reactivates all edit buttons
