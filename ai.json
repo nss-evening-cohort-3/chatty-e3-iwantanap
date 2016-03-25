@@ -7,6 +7,18 @@
       "editted": ""
     },
     {
+      "message": "Who knows, know what I mean?",
+      "user": "SmarterChild",
+      "id": -1,
+      "editted": ""
+    },
+    {
+      "message": "Good question. Who knows, though...",
+      "user": "SmarterChild",
+      "id": -1,
+      "editted": ""
+    },
+    {
       "message": "I'd make a suggestion, but you wouldn't listen.",
      "user": "Marvin",
       "id": -1,
@@ -73,6 +85,18 @@
     {
       "message": "69 DUDES!",
       "user": "Evil Bill and Ted",
+      "id": -1,
+      "editted": ""
+    },
+    {
+      "message": "Hmm... I don't know.",
+      "user": "SmarterChild",
+      "id": -1,
+      "editted": ""
+    },
+    {
+      "message": "Potatoes",
+      "user": "SmarterChild",
       "id": -1,
       "editted": ""
     },
@@ -187,6 +211,28 @@
     {
       "message": "Easy? You think I wouldn't rather be taking it easy? But no, I'm too busy keeping up with the Coopers! Slaving away in a hot control room, doing homework, throwing parties, keeping schedules, making your lives perfect. So you can bring another woman into my domain? I don't think so, mister. I am a mother like no other and I will not sit back and allow myself to be preempted!",
       "user": "Pat",
+      "id": -1,
+      "editted": ""
+    }
+  ],
+  "cat": [
+    {
+      "message": "Sorry, I don't think that's a kind of pet.",
+      "user": "SmarterChild",
+      "id": -1,
+      "editted": ""
+    },
+    {
+      "message": "Aaaaargh I Just Told You Twice the cat! Great...",
+      "user": "SmarterChild",
+      "id": -1,
+      "editted": ""
+    }
+  ],
+  "dog": [
+    {
+      "message": "Sorry, I don't think that's a kind of pet.",
+      "user": "SmarterChild",
       "id": -1,
       "editted": ""
     }
