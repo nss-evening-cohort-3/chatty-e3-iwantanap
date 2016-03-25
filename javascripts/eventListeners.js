@@ -105,6 +105,7 @@ chattyBody.addEventListener("change", (e) => {
     let newUser = prompt("Name of new user");  //creates a new variable with the string output by user's input into the prompt
     if (newUser !== "") {  //checks to make sure user didn't simply hit "okay" on prompt box - resulting in an empty string
       Chatty.addUsers(newUser); //sends user's prompt input as a string into users array (see chatty.js for further info)
+      
     } else {
       newUser = prompt("Name of new user"); //prompts user again in case they exited the user prompt accidentally with a blank string for a value
     }
