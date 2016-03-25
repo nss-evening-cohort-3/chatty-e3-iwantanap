@@ -37,6 +37,10 @@ var Chatty = ((oldChatty) => {
         }
     }
 
+    oldChatty.getUsers = () => {
+        return users;
+    }
+
 
     return oldChatty
 })(Chatty);
