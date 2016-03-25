@@ -5,6 +5,7 @@
 
 1. Sticky Navigation:
   * Input field that accepts return key as submit 
+      - Can also be done through the User Input
   * Button to clear message board (last 20 messages) 
   * Themes button that brings up modal   
 

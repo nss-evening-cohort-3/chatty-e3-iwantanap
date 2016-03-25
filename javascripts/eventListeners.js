@@ -8,7 +8,7 @@ let chattyBody = document.querySelector("body");
 // ******************************** ALL KEYPRESS EVENTS ********************************>
 // NAV: When return key is detected, you'll create a new message.
 chattyBody.addEventListener("keypress", (e) => {
-  if (event.target.id === "message-input" && event.code === "Enter") {
+  if (event.target.id === "message-input" && event.code === "Enter" || event.target.id === "user-dropdown" && event.code === "Enter" && document.getElementById('message-input').value !== "") { 
     let selectedUser = document.getElementById("user-dropdown").value;  //grabs user who is "posting" 
       if (selectedUser === "defaultVal") {  //checks to make sure a user is selected. does not default to a specific value for UX, don't want to accidentally have all messages posted from first item in the array
             alert("Select a user, bozo.")
