@@ -18,7 +18,7 @@ var Chatty = ((oldChatty) => {
         let userArray = users.names;
         let buildUserDropDown = "";
         for (let i = 0; i < userArray.length; i++) {
-            buildUserDropDown += `<option value=${userArray[i].toLowerCase()}>${userArray[i]}</option>`
+            buildUserDropDown += `<option value=${userArray[i]}>${userArray[i]}</option>`
         }
         document.getElementById("user-dropdown").innerHTML = `<option value="defaultVal">Select User</option>` + buildUserDropDown + `<option value="addUser">+Add User</option>`;
     };
