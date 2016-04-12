@@ -34,10 +34,9 @@ var Chatty = ((oldChatty) => {
     }
 
     oldChatty.disableEditMode = () => {
-        let editButton = document.getElementsByClassName("editThisMessage"); //grabs all edit buttons for messages currently displayed on dom
-        for (let i = 0; i < editButton.length; i++) {
-            editButton[i].disabled = true; //loops through each edit btton and disables it temporarily - it is editable once user leaves edit mode and items are added to the DOM
-        };
+        $(".editThisMessage").each(function(){
+            $(this).prop("disabled", true)
+        }); //grabs all edit buttons for messages currently displayed on dom
     }
 
     return oldChatty
