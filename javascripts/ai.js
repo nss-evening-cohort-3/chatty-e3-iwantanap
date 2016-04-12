@@ -1,14 +1,13 @@
 "use strict"
-var Chatty = (function(oldChatty) {
+var Chatty = ( (oldChatty) => {
   //Array for the responses to be stored into
   let ai = [];
   //Starts XHR
-  let aiXML = new XMLHttpRequest();
-  aiXML.addEventListener("load", function(){
-    ai = JSON.parse(this.responseText);
-  });
-  aiXML.open("GET", "ai.json");
-  aiXML.send();
+  $.ajax({
+        url: "ai.json"
+    }).done(function(data){
+        ai = data;
+    })
   //Ends XHR
 
   //Chooses which 'AI' response to post
@@ -43,15 +42,13 @@ var Chatty = (function(oldChatty) {
 
   //Prevents user from editing or deleting AI responses
   oldChatty.stopEditDelete = function() {
-    let runThrough = document.getElementsByClassName('container-fluid');
-    for (let i in runThrough) {
-      if (runThrough[i].id === "-1") {
-        for (let j=0; j<2; j++) {
-          runThrough[i].getElementsByTagName('div')[1].getElementsByTagName('button')[j].disabled = true
-        };
-      };
-    };
-  }
+    let container = $(".container-fluid")
+      container.each(function(i) {
+        if (container[i].id === "-1") {
+          $(container[i]).find(".btn").prop("disabled", true);
+        }
+      })
+    }
 
   return Chatty
-}(Chatty));
+})(Chatty);
