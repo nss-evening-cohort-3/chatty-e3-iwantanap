@@ -1,8 +1,8 @@
 "use strict"
-var Chatty = (function(oldChatty) {
+var Chatty = ( (oldChatty) => {
 
     //Adds 20 responses to the DOM
-    oldChatty.onToDom = function() {
+    oldChatty.onToDom = () => {
         //Checks for cursing and adds styling to it.
         Chatty.checkCurse()
         let messageArray = Chatty.getMessages();
@@ -14,21 +14,21 @@ var Chatty = (function(oldChatty) {
         //Adds Emojis to the string
         buildString = Chatty.addEmoji(buildString);
         //Puts string into the DOM
-        document.getElementById("message-area").innerHTML = buildString;
+        $("#message-area").html(buildString);
         //Check for empty string and stops from editing or deleting AI responses
         Chatty.checkClearButton();
         Chatty.stopEditDelete();
     };
 
     //Checks to see if clear button is useable or not.
-    oldChatty.checkClearButton = function() {
-        if (document.getElementById("message-area").innerHTML === "") {
-          document.getElementById("clear-board").disabled = true;
+    oldChatty.checkClearButton = () => {
+        var clearButton = $("#clear-board")
+        if ($("#message-area").html() === "") {
+          clearButton.prop("disabled", true)
         } else {
-            document.getElementById("clear-board").disabled = false;
+          clearButton.prop("disabled", false)
         }
     }
 
-
-    return oldChatty
-}(Chatty));
+    return oldChatty;
+})(Chatty);

@@ -5,13 +5,15 @@ var Chatty = (() => {
   let messages = [];
 
   return {
-    loadMessages: (callbackFunc) => {
+    loadMessages: () => {
       // The first IIFE should add a public function (e.g. loadMessages) that loads the messages.json file and stores the messages in a private variable.
-      $.get("messages.json", function(data){
-        messages = data.messages;
-        callbackFunc();
+      $.ajax({
+          url: "messages.json"
+      }).done((data) => {
+          messages = data.messages;
+          Chatty.onToDom();
       });
-    },
+     },
 
     //Adds new message text to the messages Array
     addMessages: (newMessageObject) => messages.push(newMessageObject),
