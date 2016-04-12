@@ -3,12 +3,11 @@ var Chatty = (function(oldChatty) {
   //Array to store curses from JSON into
   var curses = [];
   //Begin XHR
-  var aiXML = new XMLHttpRequest();
-  aiXML.addEventListener("load", function(){
-    curses = JSON.parse(this.responseText).bannedNameList.word;
-  });
-  aiXML.open("GET", "curse.json");
-  aiXML.send();
+    $.ajax({
+        url: "curse.json"
+    }).done(function(data){
+        curses = data.bannedNameList.word;
+    })
   //End XHR
 
   oldChatty.checkCurse = function() {
