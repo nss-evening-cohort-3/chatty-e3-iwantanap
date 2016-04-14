@@ -20,13 +20,13 @@ var Chatty = ((oldChatty) => {
         for (let i = 0; i < userArray.length; i++) {
             buildUserDropDown += `<option value=${userArray[i]}>${userArray[i]}</option>`
         }
-        document.getElementById("user-dropdown").innerHTML = `<option value="defaultVal">Select User</option>` + buildUserDropDown + `<option value="addUser">+Add User</option>`;
+        $("#user-dropdown").html(`<option value="defaultVal">Select User</option>` + buildUserDropDown + `<option value="addUser">+Add User</option>`);
     };
 
 
     // Selects users at time of message being entered and returns the value
     oldChatty.selectUsers  = () => { 
-        let selectedUser = document.getElementById("user-dropdown").value; 
+        let selectedUser = $("#user-dropdown").val(); 
         if (selectedUser === "defaultVal") {
             alert("Select a user, bozo.")
         } else if (selectedUser === "addUser"){ 
