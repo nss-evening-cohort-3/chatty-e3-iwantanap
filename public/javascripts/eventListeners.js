@@ -8,8 +8,8 @@ let chattyBody = $("body");
 // ******************************** ALL KEYPRESS EVENTS ********************************>
 // NAV: When return key is detected, you'll create a new message.
 chattyBody.keypress((event) => {
-  if (event.target.id === "message-input" && event.originalEvent.keyIdentifier === "Enter" || event.target.id === "user-dropdown" && event.originalEvent.keyIdentifier  === "Enter") { 
-    let selectedUser = $("#user-dropdown").val();  //grabs user who is "posting" 
+  if (event.target.id === "message-input" && event.originalEvent.keyCode == 13 || event.target.id === "user-dropdown" && event.originalEvent.keyCode == 13 ) {
+    let selectedUser = $("#user-dropdown").val();  //grabs user who is "posting"
       if (selectedUser === "defaultVal") {  //checks to make sure a user is selected. does not default to a specific value for UX, don't want to accidentally have all messages posted from first item in the array
             alert("Select a user, bozo.")
       } else {
@@ -33,7 +33,7 @@ chattyBody.click((event) => {
       Chatty.onToDom();  //cycles through current array (any remaining messages beyond 20) and the next >= 20 messages and outputs them to DOM (see chatty.js for further info)
     }
   }
-  
+
 
   // INDIVIDAL MESSAGE: When the user clicks the delete messages beside a message, that message is removed from private array
   if (event.target.className.includes("deleteThisMessage") === true) {  //each delete button has a class of deleteThisMessage. this detects to see if clicked item contains that class
@@ -68,7 +68,7 @@ chattyBody.click((event) => {
   }
 
 
-  // FUN THEMES: User is able to select from 4 themes via model 
+  // FUN THEMES: User is able to select from 4 themes via model
   if (event.target.id === "theme1" && event.originalEvent.returnValue === true) {  //checks to see if user clicked on first theme
     chattyBody.removeClass("theme2 theme3 theme4").addClass("theme1");  //adds user's selected theme to the body
   }
