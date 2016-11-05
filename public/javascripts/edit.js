@@ -3,13 +3,16 @@
 var Chatty = ((oldChatty) => {
 
     oldChatty.editModeFunc = (thisMessage) => {
-        Chatty.disableEditMode(); //first disables edit mode button for all messages to prevent bug where first-selected message text is applied to all messages in editMode 
-        let messageId = thisMessage.id; 
-        let messageToEditText = $(thisMessage).find(".message-text"); //gathers message content
+        Chatty.disableEditMode(); //first disables edit mode button for all messages to prevent bug where first-selected message text is applied to all messages in editMode
+        let messageId = thisMessage.id;
+        let messageToEditText = $(`#${thisMessage}`).find(".message-text"); //gathers message content
         let messageValue = messageToEditText.html();
+        console.log(messageId)
+        console.log(messageToEditText)
+        console.log(messageValue)
         messageValue = messageValue.replace(/<p.*<\/p>/g, "");  //removes "edited tag" from any messages previously edited when user puts a message into edit mode multiple times
         messageValue = Chatty.removeEmoji(messageValue); //puts any images into regular [] form for edit purposes
-        messageValue = Chatty.revertCurse(messageValue, messageId); 
+        messageValue = Chatty.revertCurse(messageValue, messageId);
         messageToEditText.html(`<input type="text" id="editMode">`); //inserts text input mode where message text was displayed
         let editMode = $("#editMode")//selects element in editMode
         editMode.val(messageValue); //inserts current message text as default value for text input
